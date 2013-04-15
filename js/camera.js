@@ -1,12 +1,19 @@
+/**
+ * Use the computer's webcam to capture an image
+ */
+
+// getUserMedia is currently vendor prefixed
 navigator.getUserMedia = navigator.webkitGetUserMedia || navigator.getUserMedia;
 window.URL = window.URL || window.webkitURL;
 
+// set some variables
 var app = document.getElementById('app');
 var video = document.getElementById('monitor');
 var canvas = document.getElementById('photo');
 var gallery = document.getElementById('gallery');
 var ctx = canvas.getContext('2d');
 
+// Get the video stream, and set it as the video source
 function gotStream(stream) {
   if (window.URL) {
     video.src = window.URL.createObjectURL(stream);
@@ -20,7 +27,8 @@ function gotStream(stream) {
 
   stream.onended = noStream;
 
-  video.onloadedmetadata = function(e) { // Not firing in Chrome. See crbug.com/110938.
+  // Not firing in Chrome. See crbug.com/110938.
+  video.onloadedmetadata = function(e) {
     document.getElementById('splash').hidden = true;
     document.getElementById('app').hidden = false;
   };
@@ -35,6 +43,9 @@ function gotStream(stream) {
   }, 50);
 }
 
+/**
+ * Fallback for errors
+ */
 function noStream(e) {
   var msg = 'No camera available.';
   if (e.code == 1) {
@@ -43,6 +54,10 @@ function noStream(e) {
   document.getElementById('errorMessage').textContent = msg;
 }
 
+/**
+ * When the snapshot button is clicked, use the canvas to store the image.
+ * Then set it as the source for the image and append it to the gallery div.
+ */
 function capture() {
   ctx.drawImage(video, 0, 0);
   var img = document.createElement('img');
@@ -50,6 +65,10 @@ function capture() {
   gallery.appendChild(img);
 }
 
+/**
+ * When the page loads, see if the browser can run the camera.
+ * And if so, let it rain.
+ */
 function init(el) {
   if (!navigator.getUserMedia) {
     document.getElementById('errorMessage').innerHTML = 'Sorry. <code>navigator.getUserMedia()</code> is not available.';
