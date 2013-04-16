@@ -6,7 +6,6 @@ html, body {
 body {
   color: #222;
   font-family: Helvetica;
-  text-align: center;
   padding: 2em;
   background: -webkit-gradient(radial, center center, 500, center center, 1400, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.6))) #fff;
   background: -webkit-radial-gradient(farthest-side, rgba(0,0,0,0) 90%, rgba(0,0,0,0.2) 150%) #fff;
@@ -29,7 +28,7 @@ button {
   text-shadow: 1px 1px #fff;
   font-weight: 700;
   font-size: 24px;
-  margin-top: 20px;
+  margin: 20px 0 0 20px;
 }
 button:not(:disabled):hover,
 button:not(:disabled).active {
@@ -45,18 +44,40 @@ h1 {
   font-weight: 300;
   margin: 10px 0 24px;
   padding: 0;
+  text-align: center;
 }
 #monitor {
   height: 300px;
   margin-top:
 }
+.container, #gallery, #options {
+  float: left;
+}
 #gallery img {
-  height: 480px;
+  height: 300px;
 }
 .container {
   padding: 10px;
   background: black;
   border-radius: 4px;
-  float: left;
   margin-top: 20px;
+}
+#options {
+  width: 700px
+  float: left;
+  margin-left: 40px;
+}
+#options ul li {
+  display: inline;
+}
+/**
+ * This will change when the real camera's set up
+ * Right now, shooting from my laptop, my head is about 150px wide.
+ */
+#options ul li img {
+  width: 150px;
+}
+/* Necklace should be smaller */
+#options ul li img:last-child {
+  width: 70px;
 }

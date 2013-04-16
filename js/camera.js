@@ -63,7 +63,11 @@ function capture() {
   var img = document.createElement('img');
   img.src = canvas.toDataURL('image/webp');
   gallery.appendChild(img);
+
+  // Hide video stream and "take photo" button
   $('.container, button').hide();
+  // Show beautification options
+  document.getElementById('options').hidden = false;
 }
 
 /**
