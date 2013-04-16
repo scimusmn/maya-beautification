@@ -63,6 +63,7 @@ function capture() {
   var img = document.createElement('img');
   img.src = canvas.toDataURL('image/webp');
   gallery.appendChild(img);
+  $('.container, button').hide();
 }
 
 /**
@@ -75,6 +76,6 @@ function init(el) {
     return;
   }
   el.onclick = capture;
-  el.textContent = 'Snapshot';
+  el.textContent = 'Take photo';
   navigator.getUserMedia({video: true}, gotStream, noStream);
 }
