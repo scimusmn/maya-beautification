@@ -14,14 +14,19 @@
       <video id="monitor" autoplay></video>
     </div>
   </section>
-  <p><button onclick="init(this)">Capture</button></p>
   <div id="splash">
-    <p id="errorMessage">&uarr;<br>Click to begin</p>
+    <p>The ancient Maya had standards of beauty that involved both temporary adornments and jewelry and permanent body modification.</p>
+    <p>How would you look? Press Start to begin.</p>
+    <p id="errorMessage"></p>
   </div>
+  <p><button onclick="init(this)">Start</button></p>
 
   <div id="gallery"></div>
 
   <canvas id="photo" style="display:none"></canvas>
+
   <script src="js/camera.js"></script>
+  <script src="vendor/jquery-1.9.1.min.js"></script>
+
 </body>
 </html>
