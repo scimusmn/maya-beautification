@@ -63,11 +63,16 @@ function capture() {
   var img = document.createElement('img');
   img.src = canvas.toDataURL('image/webp');
   gallery.appendChild(img);
+  $('#gallery img').attr('id', 'droppable');
 
   // Hide video stream and "take photo" button
   $('.container, button').hide();
   // Show beautification options
   document.getElementById('options').hidden = false;
+  // Drag/drop functionality
+  $('#draggable li').draggable();
+  $('#droppable').droppable();
+
 }
 
 /**
