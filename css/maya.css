@@ -20,7 +20,7 @@ button {
   border: 1px solid #999;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  padding: 5px 8px;
+  padding: 15px 58px;
   outline: none;
   white-space: nowrap;
   -webkit-user-select: none;
@@ -28,7 +28,8 @@ button {
   cursor: pointer;
   text-shadow: 1px 1px #fff;
   font-weight: 700;
-  font-size: 10pt;
+  font-size: 24px;
+  margin-top: 20px;
 }
 button:not(:disabled):hover,
 button:not(:disabled).active {
@@ -40,26 +41,22 @@ button:not(:disabled).active {
   background: -webkit-linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
   background: linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
 }
-
+h1 {
+  font-weight: 300;
+  margin: 10px 0 24px;
+  padding: 0;
+}
 #monitor {
-  height: 480px;
-  float: left;
+  height: 300px;
+  margin-top:
 }
 #gallery img {
   height: 480px;
-}
-#gallery {
-  float: left;
 }
 .container {
   padding: 10px;
   background: black;
   border-radius: 4px;
   float: left;
-}
-h1 {
-  font-weight: 300;
-}
-button {
-  clear: both;
+  margin-top: 20px;
 }
