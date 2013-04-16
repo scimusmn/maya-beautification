@@ -70,14 +70,3 @@ h1 {
 #options ul li {
   display: inline;
 }
-/**
- * This will change when the real camera's set up
- * Right now, shooting from my laptop, my head is about 150px wide.
- */
-#options ul li img {
-  width: 150px;
-}
-/* Necklace should be smaller */
-#options ul li img:last-child {
-  width: 70px;
-}
