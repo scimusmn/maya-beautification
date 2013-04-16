@@ -67,10 +67,17 @@ function capture() {
 
   // Hide video stream and "take photo" button
   $('.container, button').hide();
+
   // Show beautification options
   document.getElementById('options').hidden = false;
-  // Drag/drop functionality
-  $('#draggable li').draggable();
+  // Make beauty options draggable and resizable
+  $items = $('#draggable li img');
+  $items.draggable();
+
+  // this doesn't work with draggable - might be this - http://stackoverflow.com/a/4949108
+  // $items.resizable();
+
+  // Drop zone on the photo
   $('#droppable').droppable();
 
 }
