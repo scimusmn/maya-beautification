@@ -59,11 +59,19 @@ function noStream(e) {
  * Then set it as the source for the image and append it to the gallery div.
  */
 function capture() {
-  step_two();
   ctx.drawImage(video, 0, 0);
   var img = document.createElement('img');
   img.src = canvas.toDataURL('image/webp');
-  gallery.appendChild(img);
+  $('#gallery').append(img).fadeIn('slow');
+
+  // Hide video stream and "take photo" button
+  $('.container, button').hide();
+
+  // Show step 2
+  setTimeout(function() {
+    step_two();
+  }, 300);
+
 }
 
 /**
@@ -86,11 +94,8 @@ function init(el) {
 function step_two() {
   $('#gallery img').attr('id', 'droppable');
 
-  // Hide video stream and "take photo" button
-  $('.container, button').hide();
-
   // Show beautification options
-  document.getElementById('options').hidden = false;
+  $('#options').fadeIn(500);
 
   // Make beauty options draggable and resizable
   $items = $('#options-wrapper div');
