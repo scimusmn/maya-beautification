@@ -85,7 +85,11 @@ function init(el) {
   }
   el.onclick = capture;
   navigator.getUserMedia({video: true}, gotStream, noStream);
-  el.textContent = 'Take photo';
+
+  // Give the camera a second to start up, then change the button text
+  setTimeout(function() {
+    el.textContent = 'Take photo';
+  }, 800);
 }
 
 /**
