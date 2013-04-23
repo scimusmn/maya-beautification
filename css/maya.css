@@ -67,6 +67,6 @@ h1 {
   float: left;
   margin-left: 40px;
 }
-#options ul li {
-  display: inline;
+#options-wrapper div {
+  display: inline-block;
 }

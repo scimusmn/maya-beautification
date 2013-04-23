@@ -71,11 +71,10 @@ function capture() {
   // Show beautification options
   document.getElementById('options').hidden = false;
   // Make beauty options draggable and resizable
-  $items = $('#draggable li img');
+  $items = $('#options-wrapper div');
   $items.draggable();
 
-  // this doesn't work with draggable - might be this - http://stackoverflow.com/a/4949108
-  // $items.resizable();
+  $('#options-wrapper div img').resizable();
 
   // Drop zone on the photo
   $('#droppable').droppable();
