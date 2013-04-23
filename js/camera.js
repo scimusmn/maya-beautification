@@ -89,6 +89,7 @@ function init(el) {
   // Give the camera a second to start up, then change the button text
   setTimeout(function() {
     el.textContent = 'Take photo';
+    document.getElementById('start-over').hidden = false;
   }, 800);
 }
 
