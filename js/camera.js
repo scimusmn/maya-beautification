@@ -29,7 +29,7 @@ function gotStream(stream) {
 
   // Not firing in Chrome. See crbug.com/110938.
   video.onloadedmetadata = function(e) {
-    document.getElementById('splash').hidden = true;
+    document.getElementById('step-1').hidden = true;
     document.getElementById('app').hidden = false;
   };
 
@@ -38,7 +38,7 @@ function gotStream(stream) {
   setTimeout(function() {
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
-    document.getElementById('splash').hidden = true;
+    document.getElementById('step-1').hidden = true;
     document.getElementById('app').hidden = false;
   }, 50);
 }
@@ -59,28 +59,11 @@ function noStream(e) {
  * Then set it as the source for the image and append it to the gallery div.
  */
 function capture() {
+  step_two();
   ctx.drawImage(video, 0, 0);
   var img = document.createElement('img');
   img.src = canvas.toDataURL('image/webp');
   gallery.appendChild(img);
-  $('#gallery img').attr('id', 'droppable');
-
-  // Hide video stream and "take photo" button
-  $('.container, button').hide();
-
-  // Show beautification options
-  document.getElementById('options').hidden = false;
-  // Make beauty options draggable and resizable
-  $items = $('#options-wrapper div');
-  $items.draggable();
-
-  $('#options-wrapper div img').resizable({
-    aspectRatio: true
-  });
-
-  // Drop zone on the photo
-  $('#droppable').droppable();
-
 }
 
 /**
@@ -93,6 +76,29 @@ function init(el) {
     return;
   }
   el.onclick = capture;
-  el.textContent = 'Take photo';
   navigator.getUserMedia({video: true}, gotStream, noStream);
+  el.textContent = 'Take photo';
+}
+
+/**
+ * Update the visible interface elements for step 2
+ */
+function step_two() {
+  $('#gallery img').attr('id', 'droppable');
+
+  // Hide video stream and "take photo" button
+  $('.container, button').hide();
+
+  // Show beautification options
+  document.getElementById('options').hidden = false;
+
+  // Make beauty options draggable and resizable
+  $items = $('#options-wrapper div');
+  $items.draggable();
+  $('#options-wrapper div img').resizable({
+    aspectRatio: true
+  });
+
+  // Drop zone on the photo
+  $('#droppable').droppable();
 }
