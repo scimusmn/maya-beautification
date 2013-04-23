@@ -11,6 +11,9 @@ body {
   background: -webkit-radial-gradient(farthest-side, rgba(0,0,0,0) 90%, rgba(0,0,0,0.2) 150%) #fff;
   background: radial-gradient(farthest-side, rgba(0,0,0,0) 90%, rgba(0,0,0,0.2) 150%) #fff;
   box-sizing: border-box;
+  width: 1080px;
+  height: 1920px;
+  overflow: hidden;
 }
 button {
   background: -webkit-gradient(linear, 0% 40%, 0% 70%, from(#F9F9F9), to(#E3E3E3));
@@ -44,7 +47,10 @@ h1 {
   font-weight: 300;
   margin: 10px 0 24px;
   padding: 0;
-  text-align: center;
+}
+#step-1 img {
+  float: left;
+  margin: 0 20px 0 0;
 }
 #monitor {
   height: 300px;
