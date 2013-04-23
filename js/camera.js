@@ -64,12 +64,13 @@ function capture() {
   img.src = canvas.toDataURL('image/webp');
   $('#gallery').append(img).fadeIn('slow');
 
-  // Hide video stream and "take photo" button
+  // Hide video stream, help text and "take photo" button
   $('.container, button').hide();
+  document.getElementById('camera-help').hidden = true;
 
-  // Show step 2
+  // Show step 3
   setTimeout(function() {
-    step_two();
+    step_three();
   }, 300);
 
 }
@@ -88,15 +89,17 @@ function init(el) {
 
   // Give the camera a second to start up, then change the button text
   setTimeout(function() {
+    $('section').append(el);
     el.textContent = 'Take photo';
-    document.getElementById('start-over').hidden = false;
+    document.getElementById('step-2').hidden = false;
   }, 800);
 }
 
 /**
  * Update the visible interface elements for step 2
  */
-function step_two() {
+function step_three() {
+
   $('#gallery img').attr('id', 'droppable');
 
   // Show beautification options

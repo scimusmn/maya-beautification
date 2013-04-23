@@ -10,19 +10,27 @@
 
 <body>
   <h1>Maya Beautification</h1>
-  <section id="app" hidden>
-    <div class="container">
-      <video id="monitor" autoplay></video>
-    </div>
-  </section>
+
   <div id="step-1">
     <img src="img/scribe.jpg" />
     <p>The ancient Maya had standards of beauty that involved both temporary adornments and jewelry and permanent body modification.</p>
     <p>How would you look? <strong>Press Start to begin</strong>.</p>
     <p id="errorMessage"></p>
   </div>
-  <p><button onclick="init(this)">Start</button></p>
-  <p id="start-over" hidden><button onclick="window.location.reload(false)">Start over</button>
+  <p id="start"><button onclick="init(this)">Start</button></p>
+
+  <div id="step-2" hidden>
+    <p id="camera-help">Look towards the webcam and tap the <strong>Take photo</strong> button when you're ready.</p>
+
+    <section id="app" hidden>
+      <div class="container">
+        <video id="monitor" autoplay></video>
+      </div>
+    </section>
+    <canvas id="photo" style="display:none"></canvas>
+
+    <p id="start-over"><button onclick="window.location.reload(false)">Start over</button></p>
+  </div>
 
   <div id="gallery" hidden></div>
   <div id="options" hidden>
@@ -34,8 +42,6 @@
       <div><img src="img/necklace1.png"></div>
     </div>
   </div>
-
-  <canvas id="photo" style="display:none"></canvas>
 
   <script src="js/camera.js"></script>
   <script src="vendor/jquery-1.9.1.min.js"></script>
