@@ -114,7 +114,8 @@ function step_three() {
   $items.draggable();
   $('#options-wrapper div img').resizable({
     aspectRatio: true,
-    handles: "n, e, s, w, ne, se, sw, nw"
+    handles: "n, e, s, w, ne, se, sw, nw",
+    containment: "#gallery"
   });
 
   // Drop zone on the photo
