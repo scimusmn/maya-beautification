@@ -74,7 +74,9 @@ function capture() {
   $items = $('#options-wrapper div');
   $items.draggable();
 
-  $('#options-wrapper div img').resizable();
+  $('#options-wrapper div img').resizable({
+    aspectRatio: true
+  });
 
   // Drop zone on the photo
   $('#droppable').droppable();
