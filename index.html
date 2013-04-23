@@ -17,7 +17,7 @@
     <p>How would you look? <strong>Press Start to begin</strong>.</p>
     <p id="errorMessage"></p>
   </div>
-  <p id="start"><button onclick="init(this)">Start</button></p>
+  <p id="start" class="button"><button onclick="init(this)">Start</button></p>
 
   <div id="step-2" hidden>
     <p id="camera-help">Look towards the webcam and tap the <strong>Take photo</strong> button when you're ready.</p>
@@ -29,7 +29,8 @@
     </section>
     <canvas id="photo" style="display:none"></canvas>
 
-    <p id="start-over"><button onclick="window.location.reload(false)">Start over</button></p>
+    <p id="take-photo" class="button"><button onclick="capture(this)">Take photo</button></p>
+    <p id="start-over" class="button"><button onclick="window.location.reload(false)">Start over</button></p>
   </div>
 
   <div id="gallery" hidden></div>

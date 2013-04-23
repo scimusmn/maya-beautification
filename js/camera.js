@@ -39,7 +39,7 @@ function gotStream(stream) {
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     document.getElementById('step-1').hidden = true;
-    document.getElementById('app').hidden = false;
+    $('#app').fadeIn('slow');
   }, 50);
 }
 
@@ -65,7 +65,7 @@ function capture() {
   $('#gallery').append(img).fadeIn('slow');
 
   // Hide video stream, help text and "take photo" button
-  $('.container, button').hide();
+  $('.container, .button').hide();
   document.getElementById('camera-help').hidden = true;
 
   // Show step 3
@@ -84,15 +84,19 @@ function init(el) {
     document.getElementById('errorMessage').innerHTML = 'Sorry. <code>navigator.getUserMedia()</code> is not available.';
     return;
   }
-  el.onclick = capture;
   navigator.getUserMedia({video: true}, gotStream, noStream);
 
-  // Give the camera a second to start up, then change the button text
+  // Hide Start button
+  $('#start').html('<img class="spinner" src="img/spinner.gif">');
   setTimeout(function() {
-    $('section').append(el);
-    el.textContent = 'Take photo';
+    $('#start').hide();
+  }, 600);
+
+  // Give the camera a second to start up, then show step 2 elements
+  setTimeout(function() {
+    // Show step 2
     document.getElementById('step-2').hidden = false;
-  }, 800);
+  }, 900);
 }
 
 /**
