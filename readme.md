@@ -19,4 +19,4 @@ See yourself wearing all these adornments.
 + In the future, this might connect to the Internet, allowing visitors to e-mail their images to themselves.
 
 ## Install
-No special instructions yet.
++ Requirements: local webserver with SSL enabled
