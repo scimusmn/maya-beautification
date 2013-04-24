@@ -49,20 +49,9 @@ button:not(:disabled).active {
   background: -webkit-linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
   background: linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
 }
-p#start {
-  margin: 0px;
-}
-#start img {
-  position: relative;
-  top: 20px;
-  left: 70px;
-}
 p#start-over button {
   font-size: 16px;
   padding: 15px 30px;
-}
-div#step-2-btns {
-  margin: 20px 0 0 20px;
 }
 
 /* Step 1 */
@@ -70,13 +59,25 @@ div#step-2-btns {
   float: left;
   margin: 0 20px 0 0;
 }
+p#start {
+  margin: 0;
+}
+#start img {
+  position: relative;
+  top: 20px;
+  left: 70px;
+}
 
 /* Step 2 */
+div#step-2-btns {
+  float: left;
+  margin: 10px 0 0 16px;
+}
 #monitor {
   height: 300px;
   margin-top:
 }
-.container, #gallery, #options {
+.container, #gallery {
   float: left;
 }
 .container {
@@ -93,7 +94,10 @@ div#step-2-btns {
 #options {
   width: 570px;
   float: left;
-  margin-left: 40px;
+  margin-left: 30px;
+}
+#options p {
+  margin-top: 0;
 }
 #options-wrapper div {
   display: inline-block;
