@@ -109,11 +109,17 @@ ul#characters {
 }
 ul#characters li {
   display: inline-block;
-  margin-right: 10px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 5px;
 }
 ul#characters li.active {
   background: blue;
   color: #f7f7f7;
-  padding: 6px 12px;
-  border-radius: 8px;
+}
+p.persona {
+  display: none;
+}
+p.persona.active {
+  display: block;
 }

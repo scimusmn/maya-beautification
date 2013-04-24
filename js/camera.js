@@ -13,8 +13,13 @@ var canvas = document.getElementById('photo');
 var gallery = document.getElementById('gallery');
 var ctx = canvas.getContext('2d');
 
+// Start up the camera when the page loads
 $(document).ready(function() {
-  init();
+  if (!navigator.getUserMedia) {
+    document.getElementById('errorMessage').innerHTML = 'Sorry. <code>navigator.getUserMedia()</code> is not available.';
+    return;
+  }
+  navigator.getUserMedia({video: true}, gotStream, noStream);
 });
 
 // Get the video stream, and set it as the video source
@@ -24,11 +29,9 @@ function gotStream(stream) {
   } else {
     video.src = stream; // Opera.
   }
-
   video.onerror = function(e) {
     stream.stop();
   };
-
   stream.onended = noStream;
 
   // Set the canvas to the size of the captured video
@@ -63,23 +66,11 @@ function capture() {
 
   // Hide step 1, show step 2
   document.getElementById('step-1').hidden = true;
-  document.getElementById('step-2').hidden = false;
+  $('#step-2').fadeIn(500);
 
   // Turn on the jQuery UI interactions
   activate_ui();
 
-}
-
-/**
- * When the page loads, see if the browser can run the camera.
- * And if so, let it rain.
- */
-function init() {
-  if (!navigator.getUserMedia) {
-    document.getElementById('errorMessage').innerHTML = 'Sorry. <code>navigator.getUserMedia()</code> is not available.';
-    return;
-  }
-  navigator.getUserMedia({video: true}, gotStream, noStream);
 }
 
 /**
@@ -88,9 +79,6 @@ function init() {
 function activate_ui() {
 
   $('#gallery img').attr('id', 'droppable');
-
-  // Show beautification options
-  $('#options').fadeIn(500);
 
   // Make beauty options draggable and resizable
   $items = $('#options-wrapper div');
@@ -103,5 +91,35 @@ function activate_ui() {
 
   // Drop zone on the photo
   $('#droppable').droppable();
+
+  // Enable navigation between personas
+  persona_nav();
+
+}
+
+/**
+ * Persona selection
+ * When a persona option is tapped, load that section's text and beauty options
+ */
+function persona_nav() {
+
+  $('ul#characters li').click(function() {
+
+    // Toggle the "active" class
+    $('li.active').removeClass('active');
+    $(this).addClass('active');
+
+    $('p.persona').hide();
+
+    var selected_persona_id = $(this).attr('id'),
+        selected_persona_name = $(this).text();
+
+    // Update the text
+    $('h3#active-character').text(selected_persona_name);
+    $('p.' + selected_persona_id).fadeIn('fast');
+
+  });
+
+
 }
 
