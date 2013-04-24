@@ -20,6 +20,9 @@ h1 {
   margin: 10px 0 24px;
   padding: 0;
 }
+h2 {
+  font-weight: 300;
+}
 
 /* Buttons */
 button {
@@ -101,4 +104,20 @@ div#step-2-btns {
 }
 #options-wrapper div {
   display: inline-block;
+}
+ul#characters {
+  list-style-type: none;
+  margin: 10px 0 40px 0;
+  font-size: 18px;
+  padding: 0;
+}
+ul#characters li {
+  display: inline-block;
+  margin-right: 10px;
+}
+ul#characters li.active {
+  background: blue;
+  color: #f7f7f7;
+  padding: 6px 12px;
+  border-radius: 8px;
 }
