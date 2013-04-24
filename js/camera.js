@@ -99,13 +99,27 @@ function activate_ui() {
     // Create an array for each group which lists the item heights
     var heights = [];
     $('.item', this).each(function (index) {
-      heights.push($(this).height()); // Put the item height into the array
-      // If it's not the first item, push it down the height of the item before, plus 10
+
+      // Put the item height into the array
+      heights.push($(this).height());
+
+      // If it's not the first item, figure out how far to push it down the screen
       if (index > 0) {
-        var itemBefore = index - 1,
-            offset = heights[itemBefore] + 10;
+        var offset = 0,
+            margins = 10 * index; // 10px margin between each item
+
+        // Add up the heights of each thing before this item
+        for (var i = 0; i < index; i++) {
+          offset += parseInt(heights[i]);
+        }
+
+        // Add the heights to the margins
+        offset = offset + margins;
+
+        // Position the item
         $(this).css('top', offset);
       }
+
     });
   });
 
