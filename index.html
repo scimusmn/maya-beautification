@@ -25,7 +25,7 @@
   </div>
 
   <div id="step-2" hidden>
-    <div id="gallery" hidden></div>
+    <div id="gallery" class="droppable" hidden></div>
     <div id="personas">
       <p>Choose a character from the options below, then drag items onto your picture.
       You can resize items by pinching or stretching them with two or more fingers.</p>
@@ -49,18 +49,20 @@
       <p class="persona ballplayer">Sportsballplayer text</p>
       <p class="persona soldier">Soldier text</p>
     </div>
+
     <div id="options-wrapper">
       <h4>Drag items from below onto your picture:</h4>
-      <div class="scribe">
-        <span class="item"><img src="img/headdress1.png"></span>
-      </div>
-      <div class="ballplayer">
-        <span class="item"><img src="img/headdress2.png"></span>
-      </div>
-      <div class="soldier">
-        <span class="item"><img src="img/necklace1.png"></span>
-      </div>
+      <section class="scribe persona">
+        <div class="item"><img src="img/headdress1.png"></div>
+      </section>
+      <section class="ballplayer persona">
+        <div class="item"><img src="img/headdress2.png"></div>
+      </section>
+      <section class="soldier persona">
+        <div class="item"><img src="img/necklace1.png"></div>
+      </section>
     </div>
+
   </div>
 
   <script src="vendor/jquery-1.9.1.min.js"></script>

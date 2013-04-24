@@ -99,7 +99,7 @@ button.small {
 #options-wrapper h4 {
   margin: 10px 0 24px;
 }
-#options-wrapper div {
+#options-wrapper span {
   display: inline-block;
 }
 ul#characters {

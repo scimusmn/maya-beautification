@@ -78,19 +78,18 @@ function capture() {
  */
 function activate_ui() {
 
-  $('#gallery img').attr('id', 'droppable');
-
   // Make beauty options draggable and resizable
-  $items = $('#options-wrapper div');
+  $items = $('#options-wrapper div.item');
   $items.draggable();
-  $('#options-wrapper div img').resizable({
+
+  $('#options-wrapper div.item img').resizable({
     aspectRatio: true,
     handles: "n, e, s, w, ne, se, sw, nw",
     containment: "#gallery"
   });
 
   // Drop zone on the photo
-  $('#droppable').droppable();
+  $('.droppable').droppable();
 
   // Enable navigation between personas
   persona_nav();
@@ -108,17 +107,17 @@ function persona_nav() {
       selected_persona_id = name_to_id(selected_persona_name);
 
   // Set the default's menu item active. Show the title, text and items.
-  $('li#' + selected_persona_id).add('div.' + selected_persona_id).addClass('active');
+  $('li#' + selected_persona_id).add('section.' + selected_persona_id).addClass('active');
   $('h3#active-character').text(selected_persona_name);
   $('p.' + selected_persona_id).show();
-  $('#options-wrapper div').not('.active, .ui-wrapper').hide();
+  $('#options-wrapper section').not('.active, .ui-wrapper').hide();
 
   // Update visible elements when an option is clicked
   $('ul#characters li').click(function() {
 
     // Hide currently visible persona text and items
     $('p.persona').hide();
-    $('#options-wrapper div').hide();
+    $('#options-wrapper section').hide();
 
     // Toggle the "active" class
     $('li.active').removeClass('active');
@@ -133,7 +132,7 @@ function persona_nav() {
     $('p.' + selected_persona_id).fadeIn('fast');
 
     // Show the correct items
-    $('#options-wrapper div.' + selected_persona_id).add('#options-wrapper div.' + selected_persona_id + ' div').show();
+    $('#options-wrapper section.' + selected_persona_id).add('#options-wrapper section.' + selected_persona_id + ' div').show();
 
   });
 
