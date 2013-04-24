@@ -12,58 +12,52 @@
   <h1>Maya Beautification</h1>
 
   <div id="step-1">
-    <img src="img/scribe.jpg" />
     <p>The ancient Maya had standards of beauty that involved both temporary adornments and jewelry and permanent body modification.</p>
-    <p>How would you look? <strong>Press Start to begin</strong>.</p>
+    <p><strong>Look towards the webcam and tap the Take photo button when you're ready.</strong></p>
     <p id="errorMessage"></p>
-  </div>
-  <p id="start" class="button"><button onclick="init(this)">Start</button></p>
-
-  <div id="step-2" hidden>
-    <p id="camera-help">Look towards the webcam and tap the <strong>Take photo</strong> button when you're ready.</p>
-    <section id="app" hidden>
+    <section id="app">
       <div class="container">
         <video id="monitor" autoplay></video>
       </div>
     </section>
     <canvas id="photo" style="display:none"></canvas>
-    <div id="step-2-btns">
-      <p id="take-photo" class="button"><button onclick="capture(this)">Take photo</button></p>
-      <p id="start-over" class="button"><button onclick="window.location.reload(false)">Start over</button></p>
-    </div>
+    <p id="take-photo" class="button"><button onclick="capture(this)">Take photo</button></p>
   </div>
 
-  <div id="gallery" hidden></div>
-  <div id="options" hidden>
-    <p>Choose a character from the options below, then drag items onto your picture.
-    You can resize items by pinching or stretching them with two or more fingers.</p>
-    <h2>Choose a character</h2>
-    <ul id="characters">
-      <li id="nobleman">Noble man</li>
-      <li id="noblewoman">Noble woman</li>
-      <li id="scribe" class="active">Scribe</li>
-      <li id="ballplayer">Ball player</li>
-      <li id="soldier">Soldier</li>
-    </ul>
-    <h3 id="active-character">Scribe</h3>
-    <p>
-      A scribe is a person who writes books or documents by hand as a profession and helps the city keep track of its records.
-      The profession, previously found in all literate cultures in some form, lost most of its importance and status with the advent of printing.
-      The work could involve copying books, including sacred texts, or secretarial and administrative duties, such as
-      taking of dictation and the keeping of business, judicial and, historical records for kings, nobles, temples, and cities.
-    </p>
+  <div id="step-2" hidden>
+    <div id="gallery" hidden></div>
+    <div id="personas">
+      <p>Choose a character from the options below, then drag items onto your picture.
+      You can resize items by pinching or stretching them with two or more fingers.</p>
+      <h2>Choose a character:</h2>
+      <ul id="characters">
+        <li id="nobleman">Noble man</li>
+        <li id="noblewoman">Noble woman</li>
+        <li id="scribe" class="active">Scribe</li>
+        <li id="ballplayer">Ball player</li>
+        <li id="soldier">Soldier</li>
+      </ul>
+      <h3 id="active-character">Scribe</h3>
+      <p>
+        A scribe is a person who writes books or documents by hand as a profession and helps the city keep track of its records.
+        The profession, previously found in all literate cultures in some form, lost most of its importance and status with the advent of printing.
+        The work could involve copying books, including sacred texts, or secretarial and administrative duties, such as
+        taking of dictation and the keeping of business, judicial and, historical records for kings, nobles, temples, and cities.
+      </p>
+    </div>
     <div id="options-wrapper">
+      <h4>Drag items from below onto your picture:</h4>
       <div class="scribe"><img src="img/headdress1.png"></div>
       <div class="scribe"><img src="img/headdress2.png"></div>
       <div class="ballplayer"><img src="img/necklace1.png"></div>
     </div>
   </div>
 
-  <script src="js/camera.js"></script>
   <script src="vendor/jquery-1.9.1.min.js"></script>
   <script src="vendor/jquery-ui-1.10.2.custom.min.js"></script>
   <script src="vendor/jquery.ui.touch-punch.min.js"></script>
   <script src="vendor/jquery.hammer.min.js"></script>
+  <script src="js/camera.js"></script>
 
 </body>
 </html>

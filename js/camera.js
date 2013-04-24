@@ -13,6 +13,10 @@ var canvas = document.getElementById('photo');
 var gallery = document.getElementById('gallery');
 var ctx = canvas.getContext('2d');
 
+$(document).ready(function() {
+  init();
+});
+
 // Get the video stream, and set it as the video source
 function gotStream(stream) {
   if (window.URL) {
@@ -27,19 +31,10 @@ function gotStream(stream) {
 
   stream.onended = noStream;
 
-  // Not firing in Chrome. See crbug.com/110938.
-  video.onloadedmetadata = function(e) {
-    document.getElementById('step-1').hidden = true;
-    document.getElementById('app').hidden = false;
-  };
-
-  // Since video.onloadedmetadata isn't firing for getUserMedia video, we have
-  // to fake it.
+  // Set the canvas to the size of the captured video
   setTimeout(function() {
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
-    document.getElementById('step-1').hidden = true;
-    $('#app').fadeIn('fast');
   }, 50);
 }
 
@@ -55,23 +50,23 @@ function noStream(e) {
 }
 
 /**
- * When the snapshot button is clicked, use the canvas to store the image.
- * Then set it as the source for the image and append it to the gallery div.
+ * This runs when the user taps "Click Photo"
  */
 function capture() {
+  // When the snapshot button is clicked, use the canvas to store the image.
   ctx.drawImage(video, 0, 0);
   var img = document.createElement('img');
   img.src = canvas.toDataURL('image/webp');
+
+  // Then set it as the source for the image and append it to the gallery div
   $('#gallery').append(img).fadeIn('slow');
 
-  // Hide video stream, help text and "take photo" button
-  $('.container, .button').hide();
-  document.getElementById('camera-help').hidden = true;
+  // Hide step 1, show step 2
+  document.getElementById('step-1').hidden = true;
+  document.getElementById('step-2').hidden = false;
 
-  // Show step 3
-  setTimeout(function() {
-    step_three();
-  }, 300);
+  // Turn on the jQuery UI interactions
+  activate_ui();
 
 }
 
@@ -79,31 +74,18 @@ function capture() {
  * When the page loads, see if the browser can run the camera.
  * And if so, let it rain.
  */
-function init(el) {
+function init() {
   if (!navigator.getUserMedia) {
     document.getElementById('errorMessage').innerHTML = 'Sorry. <code>navigator.getUserMedia()</code> is not available.';
     return;
   }
   navigator.getUserMedia({video: true}, gotStream, noStream);
-
-  // Hide Start button
-  $('#start').html('<img class="spinner" src="img/spinner.gif">');
-  $('#step-1').fadeOut(600);
-  setTimeout(function() {
-    $('#start').hide();
-  }, 600);
-
-  // Give the camera a second to start up, then show step 2 elements
-  setTimeout(function() {
-    // Show step 2
-    document.getElementById('step-2').hidden = false;
-  }, 900);
 }
 
 /**
- * Update the visible interface elements for step 2
+ * Initialize jQuery UI interactions
  */
-function step_three() {
+function activate_ui() {
 
   $('#gallery img').attr('id', 'droppable');
 
@@ -122,3 +104,4 @@ function step_three() {
   // Drop zone on the photo
   $('#droppable').droppable();
 }
+
