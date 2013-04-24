@@ -103,23 +103,48 @@ function activate_ui() {
  */
 function persona_nav() {
 
+  // Show default option first
+  var selected_persona_name = 'Scribe'; // @TODO - Add to config file if there ends up being one?
+      selected_persona_id = name_to_id(selected_persona_name);
+
+  // Set the default's menu item active. Show the title, text and items.
+  $('li#' + selected_persona_id).add('div.' + selected_persona_id).addClass('active');
+  $('h3#active-character').text(selected_persona_name);
+  $('p.' + selected_persona_id).show();
+  $('#options-wrapper div').not('.active, .ui-wrapper').hide();
+
+  // Update visible elements when an option is clicked
   $('ul#characters li').click(function() {
+
+    // Hide currently visible persona text and items
+    $('p.persona').hide();
+    $('#options-wrapper div').hide();
 
     // Toggle the "active" class
     $('li.active').removeClass('active');
     $(this).addClass('active');
 
-    $('p.persona').hide();
-
-    var selected_persona_id = $(this).attr('id'),
-        selected_persona_name = $(this).text();
+    // Update the variables
+    var selected_persona_name = $(this).text(),
+        selected_persona_id = name_to_id(selected_persona_name);
 
     // Update the text
     $('h3#active-character').text(selected_persona_name);
     $('p.' + selected_persona_id).fadeIn('fast');
 
+    // Show the correct items
+    $('#options-wrapper div.' + selected_persona_id).add('#options-wrapper div.' + selected_persona_id + ' div').show();
+
   });
 
+}
 
+/**
+ * Given a persona name, return an ID.
+ * This just makes everything lowercase and removes spaces.
+ */
+function name_to_id(name) {
+  var name = name.toLowerCase().replace(/\s+/g, '');
+  return name;
 }
 

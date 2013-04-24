@@ -94,6 +94,7 @@ button.small {
 }
 #options-wrapper {
   float: left;
+  clear: both;
 }
 #options-wrapper h4 {
   margin: 10px 0 24px;
@@ -119,7 +120,4 @@ ul#characters li.active {
 }
 p.persona {
   display: none;
-}
-p.persona.active {
-  display: block;
 }
