@@ -23,6 +23,11 @@ h1 {
 h2 {
   font-weight: 300;
 }
+h5 {
+  font-size: 14px;
+  margin: 0 0 30px;
+  font-weight: 300;
+}
 
 /* Buttons */
 button {
@@ -97,10 +102,14 @@ button.small {
   clear: both;
 }
 #options-wrapper h4 {
-  margin: 10px 0 24px;
+  margin: 10px 0 6px;
+  width: 640px;
 }
-#options-wrapper span {
-  display: inline-block;
+#options-wrapper section {
+  position: relative;
+}
+#options-wrapper div.item {
+  position: absolute;
 }
 ul#characters {
   list-style-type: none;

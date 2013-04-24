@@ -25,10 +25,8 @@
   </div>
 
   <div id="step-2" hidden>
-    <div id="gallery" class="droppable" hidden></div>
+    <div id="gallery" class="droppablesection.persona " hidden></div>
     <div id="personas">
-      <p>Choose a character from the options below, then drag items onto your picture.
-      You can resize items by pinching or stretching them with two or more fingers.</p>
       <h2>Choose a character:</h2>
       <ul id="characters">
         <li id="nobleman">Noble man</li>
@@ -51,15 +49,31 @@
     </div>
 
     <div id="options-wrapper">
-      <h4>Drag items from below onto your picture:</h4>
-      <section class="scribe persona">
+      <h4>Drag items from below onto your picture.</h4>
+      <h5>You can resize items by pinching or stretching them with two or more fingers.</h5>
+
+      <section id="scribe" class="persona">
         <div class="item"><img src="img/headdress1.png"></div>
-      </section>
-      <section class="ballplayer persona">
         <div class="item"><img src="img/headdress2.png"></div>
       </section>
-      <section class="soldier persona">
+
+      <section id="ballplayer" class="persona">
+        <div class="item"><img src="img/headdress2.png"></div>
+      </section>
+
+      <section id="soldier" class="persona">
         <div class="item"><img src="img/necklace1.png"></div>
+        <div class="item"><img src="img/headdress1.png"></div>
+      </section>
+
+      <section id="nobleman" class="persona">
+        <div class="item"><img src="img/headdress1.png"></div>
+      </section>
+
+      <section id="noblewoman" class="persona">
+        <div class="item"><img src="img/headdress1.png"></div>
+        <div class="item"><img src="img/necklace1.png"></div>
+        <div class="item"><img src="img/headdress2.png"></div>
       </section>
     </div>
 

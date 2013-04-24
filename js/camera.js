@@ -91,6 +91,24 @@ function activate_ui() {
   // Drop zone on the photo
   $('.droppable').droppable();
 
+  // Lay out the items using dynamic absolute positioning.
+  // This allows them to be resized without pushing each other around, while remaining draggable.
+  // Each item after the first needs to be the height of the first down, plus a 10px margin.
+  $('section.persona').each(function(index)  {
+
+    // Create an array for each group which lists the item heights
+    var heights = [];
+    $('.item', this).each(function (index) {
+      heights.push($(this).height()); // Put the item height into the array
+      // If it's not the first item, push it down the height of the item before, plus 10
+      if (index > 0) {
+        var itemBefore = index - 1,
+            offset = heights[itemBefore] + 10;
+        $(this).css('top', offset);
+      }
+    });
+  });
+
   // Enable navigation between personas
   persona_nav();
 
@@ -107,7 +125,7 @@ function persona_nav() {
       selected_persona_id = name_to_id(selected_persona_name);
 
   // Set the default's menu item active. Show the title, text and items.
-  $('li#' + selected_persona_id).add('section.' + selected_persona_id).addClass('active');
+  $('li#' + selected_persona_id).add('section#' + selected_persona_id).addClass('active');
   $('h3#active-character').text(selected_persona_name);
   $('p.' + selected_persona_id).show();
   $('#options-wrapper section').not('.active, .ui-wrapper').hide();
@@ -132,7 +150,7 @@ function persona_nav() {
     $('p.' + selected_persona_id).fadeIn('fast');
 
     // Show the correct items
-    $('#options-wrapper section.' + selected_persona_id).add('#options-wrapper section.' + selected_persona_id + ' div').show();
+    $('#options-wrapper section#' + selected_persona_id).add('#options-wrapper section#' + selected_persona_id + ' div').show();
 
   });
 
