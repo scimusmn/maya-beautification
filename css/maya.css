@@ -15,6 +15,13 @@ body {
   height: 1920px;
   overflow: hidden;
 }
+h1 {
+  font-weight: 300;
+  margin: 10px 0 24px;
+  padding: 0;
+}
+
+/* Buttons */
 button {
   background: -webkit-gradient(linear, 0% 40%, 0% 70%, from(#F9F9F9), to(#E3E3E3));
   background: -webkit-linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
@@ -42,11 +49,6 @@ button:not(:disabled).active {
   background: -webkit-linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
   background: linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
 }
-p.button {
-  margin: 20px 0 0 20px;
-  text-align: center;
-  display: inline-block;
-}
 p#start {
   margin: 0px;
 }
@@ -59,15 +61,17 @@ p#start-over button {
   font-size: 16px;
   padding: 15px 30px;
 }
-h1 {
-  font-weight: 300;
-  margin: 10px 0 24px;
-  padding: 0;
+div#step-2-btns {
+  margin: 20px 0 0 20px;
 }
+
+/* Step 1 */
 #step-1 img {
   float: left;
   margin: 0 20px 0 0;
 }
+
+/* Step 2 */
 #monitor {
   height: 300px;
   margin-top:
@@ -75,14 +79,16 @@ h1 {
 .container, #gallery, #options {
   float: left;
 }
-#gallery img {
-  height: 300px;
-}
 .container {
   padding: 10px;
   background: black;
   border-radius: 4px;
   margin-top: 20px;
+}
+
+/* Step 3 */
+#gallery img {
+  height: 300px;
 }
 #options {
   width: 570px;
