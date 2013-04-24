@@ -39,7 +39,7 @@ function gotStream(stream) {
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     document.getElementById('step-1').hidden = true;
-    $('#app').fadeIn('slow');
+    $('#app').fadeIn('fast');
   }, 50);
 }
 
@@ -88,6 +88,7 @@ function init(el) {
 
   // Hide Start button
   $('#start').html('<img class="spinner" src="img/spinner.gif">');
+  $('#step-1').fadeOut(600);
   setTimeout(function() {
     $('#start').hide();
   }, 600);
