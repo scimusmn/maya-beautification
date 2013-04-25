@@ -58,8 +58,10 @@ button:not(:disabled).active {
   background: linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
 }
 button.small {
-  font-size: 16px;
-  padding: 15px 30px;
+  font-size: 14px;
+  padding: 10px 20px;
+  margin: 0 0 0 30px;
+  clear: both;
 }
 
 /* Step 1 */

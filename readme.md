@@ -7,7 +7,7 @@ See yourself wearing all these adornments.
 ## Roadmap
 + ~~Add Touch Punch (and maybe Hammer) JS library for touchscreen support.~~
 + ~~Allow draggable elements to be resized using pinch/spread finger movements.~~
-+ Add a button for starting over.
++ ~~Add a button for starting over.~~
 + Add a screensaver/timeout function to run after 3 min of inactivity.
 + Add more beautification options. ~~Maybe group these by characters, like noble man/woman, ball player, scribe, soldier...~~
 + Implement Grunt.js for minifying/concatenating JS and CSS files.
