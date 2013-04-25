@@ -22,6 +22,7 @@ h1 {
 }
 h2 {
   font-weight: 300;
+  margin-top: 0;
 }
 h5 {
   font-size: 14px;
@@ -64,7 +65,25 @@ button.small {
   clear: both;
 }
 
+/* Language switcher */
+#lang {
+  float: right;
+  color: blue;
+  cursor: pointer;
+  position: relative;
+  top: -80px;
+}
+#lang span#eng {
+  margin-right: 4px;
+  border-right: 1px solid #666;
+  padding-right: 4px;
+}
+
 /* Step 1 */
+#step-1 {
+  width: 640px;
+  line-height: 1.3;
+}
 #take-photo {
   float: left;
   margin-top: 20px;
