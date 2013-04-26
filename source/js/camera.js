@@ -82,6 +82,10 @@ function capture() {
  */
 function countdown(button, seconds) {
 
+  // Hide "Take photo" button
+  $('#take-photo').fadeOut(500);
+
+  // Run countdown
   var seconds_left = seconds;
   var interval = setInterval(function() {
     document.getElementById('timer').innerHTML = --seconds_left;
