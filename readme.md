@@ -10,7 +10,7 @@ See yourself wearing all these adornments.
 + ~~Add a button for starting over.~~
 + Add a screensaver/timeout function to run after 3 min of inactivity.
 + Add more beautification options. ~~Maybe group these by characters, like noble man/woman, ball player, scribe, soldier...~~
-+ Implement Grunt.js for minifying/concatenating JS and CSS files.
++ ~~Implement Grunt.js for minifying/concatenating JS and CSS files.~~
 + Fill in actual text content.
 + Implement language switcher. 
 + Set up the exhibit computers
