@@ -111,6 +111,13 @@ button.small {
   border-radius: 4px;
   margin-top: 20px;
 }
+#timer {
+  position: relative;
+  font-size: 500px;
+  top: -700px;
+  left: 340px;
+  color: #FFF;
+}
 
 /* Step 2 */
 #gallery img {

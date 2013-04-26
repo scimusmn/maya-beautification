@@ -82,13 +82,15 @@ function capture() {
  */
 function countdown(button, seconds) {
 
-  // Because setTimeout wants milliseconds
-  var time = seconds * 1000;
+  var seconds_left = seconds;
+  var interval = setInterval(function() {
+    document.getElementById('timer').innerHTML = --seconds_left;
 
-  // Wait the given amount of time before running "capture"
-  setTimeout(function() {
-    capture(button);
-  }, time);
+    if (seconds_left <= 0) {
+      capture(button);
+      clearInterval(interval);
+    }
+  }, 1000);
 
 }
 
