@@ -8,15 +8,16 @@ See yourself wearing all these adornments.
 + ~~Add Touch Punch (and maybe Hammer) JS library for touchscreen support.~~
 + ~~Allow draggable elements to be resized using pinch/spread finger movements.~~
 + ~~Add a button for starting over.~~
-+ Add a screensaver/timeout function to run after 3 min of inactivity.
++ ~~Add a screensaver/timeout function to run after 3 min of inactivity.~~
 + Add more beautification options. ~~Maybe group these by characters, like noble man/woman, ball player, scribe, soldier...~~
 + ~~Implement Grunt.js for minifying/concatenating JS and CSS files.~~
 + Fill in actual text content.
-+ Implement language switcher. 
++ ~~Implement language switcher.~~
++ Add a countdown so that you have 5 seconds between hitting "Take photo" and the image capture
 + Set up the exhibit computers
-  + Set up webcam, see how large of photos it can take 
-  + Set up local webserver on Windows 
-  + Set up SSL for localhost 
+  + ~~Set up webcam, see how large of photos it can take~~
+  + ~~Set up local webserver on Windows~~
+  + ~~Set up SSL for localhost~~
   + Set up Chrome to bypass SSL warning on first page load
 
 ### Long Term
