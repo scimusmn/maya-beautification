@@ -10,6 +10,7 @@ module.exports = function(grunt) {
               'libs/jquery-1.9.1.min.js',
               'libs/jquery.hammer.min.js',
               'libs/jquery.ui.touch-punch.min.js',
+              'source/js/translate.js',
               'source/js/camera.js',
               'source/js/screensaver.js'
             ]
