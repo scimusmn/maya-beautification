@@ -56,7 +56,8 @@ function noStream(e) {
  * This runs when the user taps "Click Photo"
  */
 function capture() {
-  // When the snapshot button is clicked, use the canvas to store the image.
+
+  // Use the canvas to store the image.
   ctx.drawImage(video, 0, 0);
   var img = document.createElement('img');
   img.src = canvas.toDataURL('image/webp');
@@ -70,6 +71,24 @@ function capture() {
 
   // Turn on the jQuery UI interactions
   activate_ui();
+
+}
+
+/**
+ * Show a countdown after hitting the Take Photo button
+ * This allows the visitor to step back from the camera
+ * @param button - object this function is called from (needed to pass onto capture function)
+ * @param seconds - int - number of seconds to countdown
+ */
+function countdown(button, seconds) {
+
+  // Because setTimeout wants milliseconds
+  var time = seconds * 1000;
+
+  // Wait the given amount of time before running "capture"
+  setTimeout(function() {
+    capture(button);
+  }, time);
 
 }
 
