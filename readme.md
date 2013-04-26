@@ -13,7 +13,7 @@ See yourself wearing all these adornments.
 + ~~Implement Grunt.js for minifying/concatenating JS and CSS files.~~
 + Fill in actual text content.
 + ~~Implement language switcher.~~
-+ Add a countdown so that you have 5 seconds between hitting "Take photo" and the image capture
++ ~~Add a countdown so that you have 5 seconds between hitting "Take photo" and the image capture~~
 + Set up the exhibit computers
   + ~~Set up webcam, see how large of photos it can take~~
   + ~~Set up local webserver on Windows~~
