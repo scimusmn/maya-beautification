@@ -6,7 +6,7 @@ html, body {
 body {
   color: #222;
   font-family: Helvetica;
-  padding: 2em;
+  padding: 30px 50px;
   background: -webkit-gradient(radial, center center, 500, center center, 1400, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.6))) #fff;
   background: -webkit-radial-gradient(farthest-side, rgba(0,0,0,0) 90%, rgba(0,0,0,0.2) 150%) #fff;
   background: radial-gradient(farthest-side, rgba(0,0,0,0) 90%, rgba(0,0,0,0.2) 150%) #fff;
@@ -62,6 +62,7 @@ button.small {
   font-size: 14px;
   padding: 10px 20px;
   margin: 0 0 0 30px;
+  float:right;
   clear: both;
 }
 
@@ -110,9 +111,8 @@ button.small {
   height: 720px;
 }
 #personas {
-  width: 340px;
   float: left;
-  margin-left: 30px;
+  margin: 26px 0;
 }
 #personas p {
   margin-top: 0;
