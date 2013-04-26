@@ -9,7 +9,7 @@ dictionary = {
   "english": {
     "title": "Maya beautification",
     "intro_text": "The ancient Maya had standards of beauty that involved both temporary adornments and jewelry and permanent body modification.",
-    "step1_instructions": "Look towards the webcam and tap the Take photo button when you're ready.",
+    "step1_instructions": "Look towards the webcam and tap the Take photo button when you're ready. You will have 5 seconds to get into position after hitting the button.",
     "take_photo": "Take photo",
     "choose_persona": "Choose a character:",
     "nobleman": "Noble man",
@@ -29,7 +29,7 @@ dictionary = {
   "spanish": {
     "title": "Embellecimiento Maya",
     "intro_text": "Los antiguos mayas tenían estándares de belleza que participan tanto temporales adornos y joyas y la modificación corporal permanente.",
-    "step1_instructions": "Mira hacia la cámara y pulse el botón Tomar foto cuando estés listo.",
+    "step1_instructions": "Mira hacia la cámara y pulse el botón Tomar foto cuando estés listo. Usted tendrá 5 segundos para entrar en posición después de presionar el botón.",
     "take_photo": "Tome la foto",
     "choose_persona": "Elige un personaje:",
     "nobleman": "Noble",
