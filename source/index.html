@@ -9,12 +9,12 @@
 </head>
 
 <body>
-  <h1>Maya Beautification</h1>
+  <h1 data-translate="title">Maya Beautification</h1>
   <div id="lang"><span id="eng">English</span><span id="spanish">Spanish</span></div>
 
   <div id="step-1">
-    <p data-translate="intro_text">The ancient Maya had standards of beauty that involved both temporary adornments and jewelry and permanent body modification.</p>
-    <p><strong data-translate="step1_instructions">Look towards the webcam and tap the Take photo button when you're ready.</strong></p>
+    <p data-translate="intro_text"></p>
+    <p><strong data-translate="step1_instructions"></strong></p>
     <p id="errorMessage"></p>
     <section id="app">
       <div class="container">
@@ -22,36 +22,31 @@
       </div>
     </section>
     <canvas id="photo" style="display:none"></canvas>
-    <p id="take-photo" class="button"><button data-translate="take_photo" onclick="capture(this)">Take photo</button></p>
+    <p id="take-photo" class="button"><button data-translate="take_photo" onclick="capture(this)"></button></p>
   </div>
 
   <div id="step-2" hidden>
     <div id="gallery" hidden></div>
     <div id="personas">
-      <h2 data-translate="choose_persona">Choose a character:</h2>
+      <h2 data-translate="choose_persona"></h2>
       <ul id="characters">
-        <li data-translate="nobleman" id="nobleman">Noble man</li>
-        <li data-translate="noblewoman" id="noblewoman">Noble woman</li>
-        <li data-translate="scribe" id="scribe">Scribe</li>
-        <li data-translate="baller" id="baller">Ball player</li>
-        <li data-translate="soldier" id="soldier">Soldier</li>
+        <li data-translate="nobleman" id="nobleman"></li>
+        <li data-translate="noblewoman" id="noblewoman"></li>
+        <li data-translate="scribe" id="scribe"></li>
+        <li data-translate="baller" id="baller"></li>
+        <li data-translate="soldier" id="soldier"></li>
       </ul>
-      <h3 data-translate="active-character" id="active-character">Scribe</h3>
-      <p data-translate="scribe_text" class="persona scribe">
-        A scribe is a person who writes books or documents by hand as a profession and helps the city keep track of its records.
-        The profession, previously found in all literate cultures in some form, lost most of its importance and status with the advent of printing.
-        The work could involve copying books, including sacred texts, or secretarial and administrative duties, such as
-        taking of dictation and the keeping of business, judicial and, historical records for kings, nobles, temples, and cities.
-      </p>
-      <p data-translate="nobleman_text" class="persona nobleman">Nobleman text</p>
-      <p data-translate="noblewoman_text" class="persona noblewoman">Noblewoman text</p>
-      <p data-translate="baller_text" class="persona ballplayer">Sportsballplayer text</p>
-      <p data-translate="soldier_text" class="persona soldier">Soldier text</p>
+      <h3 id="active-character"></h3>
+      <p data-translate="scribe_text" class="persona scribe"></p>
+      <p data-translate="nobleman_text" class="persona nobleman"></p>
+      <p data-translate="noblewoman_text" class="persona noblewoman"></p>
+      <p data-translate="baller_text" class="persona ballplayer"></p>
+      <p data-translate="soldier_text" class="persona soldier"></p>
     </div>
 
     <div id="options-wrapper">
-      <h4 data-translate="drag">Drag items from below onto your picture.</h4>
-      <h5 data-translate="resize">You can resize items by pinching or stretching them with two or more fingers.</h5>
+      <h4 data-translate="drag"></h4>
+      <h5 data-translate="resize"></h5>
 
       <section id="scribe" class="persona">
         <div class="item"><img src="../assets/headdress1.png"></div>
@@ -78,7 +73,7 @@
       </section>
     </div>
 
-    <p><button data-translate="retake_photo" class="small" onclick="window.location.reload(false)">Retake photo</button></p>
+    <p><button data-translate="retake_photo" class="small" onclick="window.location.reload(false)"></button></p>
 
   </div>
 
@@ -86,6 +81,7 @@
   <script src="../libs/jquery-ui-1.10.2.custom.min.js"></script>
   <script src="../libs/jquery.ui.touch-punch.min.js"></script>
   <script src="../libs/jquery.hammer.min.js"></script>
+  <script src="js/translate.js"></script>
   <script src="js/camera.js"></script>
 
 </body>
