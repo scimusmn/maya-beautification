@@ -78,7 +78,8 @@ button.small {
   color: blue;
   cursor: pointer;
   position: relative;
-  top: -80px;
+  top: -165px;
+  left: 40px;
 }
 #lang span#eng {
   margin-right: 4px;
