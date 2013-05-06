@@ -60,6 +60,7 @@ function capture() {
   // Use the canvas to store the image.
   ctx.drawImage(video, 0, 0);
   var img = document.createElement('img');
+  // @BUG - This doesn't always work - maybe 1/10 don't set the image src. Need to figure out why
   img.src = canvas.toDataURL('image/webp');
 
   // Then set it as the source for the image and append it to the gallery div
@@ -156,11 +157,12 @@ function activate_ui() {
 /**
  * Persona selection
  * When a persona option is tapped, load that section's text and beauty options
+ * @BUG - This doesn't work after translating to Spanish
  */
 function persona_nav() {
 
   // Show default option first
-  var selected_persona_name = 'Scribe'; // @TODO - Add to config file if there ends up being one?
+  var selected_persona_name = 'Scribe';
       selected_persona_id = name_to_id(selected_persona_name);
 
   // Set the default's menu item active. Show the title, text and items.
