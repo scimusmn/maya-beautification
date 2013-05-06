@@ -157,52 +157,34 @@ function activate_ui() {
 /**
  * Persona selection
  * When a persona option is tapped, load that section's text and beauty options
- * @BUG - This doesn't work after translating to Spanish
  */
 function persona_nav() {
 
-  // Show default option first
-  var selected_persona_name = 'Scribe';
-      selected_persona_id = name_to_id(selected_persona_name);
+  var selected_persona = $('#characters li.active').attr('id');
 
-  // Set the default's menu item active. Show the title, text and items.
-  $('li#' + selected_persona_id).add('section#' + selected_persona_id).addClass('active');
-  $('h3#active-character').text(selected_persona_name);
-  $('p.' + selected_persona_id).show();
-  $('#options-wrapper section').not('.active, .ui-wrapper').hide();
+  // Hide sections after the initial page load
+  // Hiding them before, like with CSS, breaks drag/drop/resize since the item size can't be determined
+  $('#options-wrapper section').not('.active').hide();
 
   // Update visible elements when an option is clicked
   $('ul#characters li').click(function() {
 
     // Hide currently visible persona text and items
-    $('p.persona').hide();
     $('#options-wrapper section').hide();
+    $('.active').not('li').hide();
+    $('.active').removeClass('active');
 
-    // Toggle the "active" class
-    $('li.active').removeClass('active');
-    $(this).addClass('active');
+    // Activate the new selection
+    selected_persona = $(this).attr('id');
+    var selected_persona_name = $(this).text();
 
-    // Update the variables
-    var selected_persona_name = $(this).text(),
-        selected_persona_id = name_to_id(selected_persona_name);
+    $('p.' + selected_persona).add('#' + selected_persona).addClass('active');
+    $('#options-wrapper section#' + selected_persona + ' div').add('#options-wrapper section#' + selected_persona).show();
 
     // Update the text
     $('h3#active-character').text(selected_persona_name);
-    $('p.' + selected_persona_id).fadeIn('fast');
-
-    // Show the correct items
-    $('#options-wrapper section#' + selected_persona_id).add('#options-wrapper section#' + selected_persona_id + ' div').show();
+    $('p.' + selected_persona).fadeIn('fast');
 
   });
 
 }
-
-/**
- * Given a persona name, return an ID.
- * This just makes everything lowercase and removes spaces.
- */
-function name_to_id(name) {
-  var name = name.toLowerCase().replace(/\s+/g, '');
-  return name;
-}
-

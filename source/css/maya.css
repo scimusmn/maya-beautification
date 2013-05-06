@@ -164,3 +164,9 @@ ul#characters li.active {
 p.persona {
   display: none;
 }
+p.active {
+  display: block;
+}
+li.active {
+  display: inline;
+}
