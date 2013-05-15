@@ -139,12 +139,6 @@ button.small {
   margin: 10px 0 6px;
   width: 960px;
 }
-#options-wrapper section {
-  position: relative;
-}
-#options-wrapper div.item {
-  position: absolute;
-}
 ul#characters {
   list-style-type: none;
   margin: 10px 0 40px 0;

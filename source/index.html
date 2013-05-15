@@ -27,29 +27,32 @@
   </div>
 
   <div id="step-2" hidden>
-    <div id="gallery" hidden></div>
     <div id="personas">
       <h2 data-translate="choose_persona"></h2>
       <ul id="characters">
-        <li data-translate="nobleman" id="nobleman"></li>
+        <li data-translate="nobleman" id="nobleman" class="active"></li>
+        <!--<li data-translate="scribe" id="scribe" ></li>
         <li data-translate="noblewoman" id="noblewoman"></li>
-        <li data-translate="scribe" id="scribe" class="active"></li>
         <li data-translate="baller" id="baller"></li>
-        <li data-translate="soldier" id="soldier"></li>
+        <li data-translate="soldier" id="soldier"></li>-->
       </ul>
-      <h3 id="active-character">Scribe</h3>
-      <p data-translate="scribe_text" class="persona scribe active"></p>
-      <p data-translate="nobleman_text" class="persona nobleman"></p>
+      <h3 id="active-character">Noble man</h3>
+      <p data-translate="nobleman_text" class="persona nobleman active"></p>
+      <!--<p data-translate="scribe_text" class="persona container"></p>
       <p data-translate="noblewoman_text" class="persona noblewoman"></p>
       <p data-translate="baller_text" class="persona baller"></p>
-      <p data-translate="soldier_text" class="persona soldier"></p>
+      <p data-translate="soldier_text" class="persona soldier"></p>-->
     </div>
 
     <div id="options-wrapper">
-      <h4 data-translate="drag"></h4>
-      <h5 data-translate="resize"></h5>
 
-      <section id="scribe" class="persona active">
+      <section id="nobleman" class="persona active">
+        <div id="obj_1" class="item"><img src="../assets/obj_nobleman_1.png"></div>
+      </section>
+
+      <h4 data-translate="drag"></h4>
+
+      <!--<section id="scribe" class="persona">
         <div class="item"><img src="../assets/headdress1.png"></div>
         <div class="item"><img src="../assets/headdress2.png"></div>
       </section>
@@ -63,16 +66,14 @@
         <div class="item"><img src="../assets/headdress1.png"></div>
       </section>
 
-      <section id="nobleman" class="persona">
-        <div class="item"><img src="../assets/headdress1.png"></div>
-      </section>
-
       <section id="noblewoman" class="persona">
         <div class="item"><img src="../assets/headdress1.png"></div>
         <div class="item"><img src="../assets/necklace1.png"></div>
         <div class="item"><img src="../assets/headdress2.png"></div>
-      </section>
+      </section>-->
     </div>
+
+    <div id="gallery" hidden></div>
 
     <p><button data-translate="retake_photo" class="small" onclick="window.location.reload(false)"></button></p>
 
