@@ -144,7 +144,6 @@ function persona_nav() {
     $('#options-wrapper section#' + selected_persona + ' div').add('#options-wrapper section#' + selected_persona).show();
 
     // Update the text
-    $('h3#active-character').text(selected_persona_name);
     $('p.' + selected_persona).fadeIn('fast');
 
   });

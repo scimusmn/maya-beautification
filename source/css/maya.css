@@ -67,8 +67,8 @@ button:not(:disabled).active {
 button.small {
   font-size: 14px;
   padding: 10px 20px;
-  margin: 0 0 0 30px;
-  float:right;
+  margin: 10px 0;
+  float: left;
   clear: both;
 }
 
@@ -106,6 +106,9 @@ button.small {
 .container, #gallery {
   float: left;
 }
+#gallery {
+  margin-top: 24px;
+}
 .container {
   padding: 10px;
   background: black;
@@ -126,22 +129,17 @@ button.small {
 }
 #personas {
   float: left;
-  margin: 26px 0;
 }
 #personas p {
-  margin-top: 0;
+  margin: 0 0 22px 0;
 }
 #options-wrapper {
   float: left;
   clear: both;
 }
-#options-wrapper h4 {
-  margin: 10px 0 6px;
-  width: 960px;
-}
 ul#characters {
   list-style-type: none;
-  margin: 10px 0 40px 0;
+  margin: 10px 0 30px 0;
   font-size: 18px;
   padding: 0;
 }
@@ -163,4 +161,22 @@ p.active {
 }
 li.active {
   display: inline;
+}
+
+/* Artwork and items */
+.item img {
+}
+.item.ui-draggable-dragging {
+}
+section#nobleman {
+  width: 960px;
+  height: 639px;
+  background: url(../../assets/bg_nobleman.jpg) no-repeat;
+}
+#nobleman #obj_1 {
+  position: relative;
+  left: 48px;
+  top: 90px;
+  height: 314px;
+  width: 234px;
 }

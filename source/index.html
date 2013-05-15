@@ -23,7 +23,7 @@
       </section>
       <div id="timer"></div>
     <canvas id="photo" style="display:none"></canvas>
-    <p id="take-photo" class="button"><button data-translate="take_photo" onclick="countdown(this, 6)"></button></p>
+    <p id="take-photo" class="button"><button data-translate="take_photo" onclick="countdown(this, 2)"></button></p>
   </div>
 
   <div id="step-2" hidden>
@@ -36,21 +36,19 @@
         <li data-translate="baller" id="baller"></li>
         <li data-translate="soldier" id="soldier"></li>-->
       </ul>
-      <h3 id="active-character">Noble man</h3>
       <p data-translate="nobleman_text" class="persona nobleman active"></p>
       <!--<p data-translate="scribe_text" class="persona container"></p>
       <p data-translate="noblewoman_text" class="persona noblewoman"></p>
       <p data-translate="baller_text" class="persona baller"></p>
       <p data-translate="soldier_text" class="persona soldier"></p>-->
     </div>
-
     <div id="options-wrapper">
 
       <section id="nobleman" class="persona active">
-        <div id="obj_1" class="item"><img src="../assets/obj_nobleman_1.png"></div>
+        <div id="obj_1" class="item">
+          <img src="../assets/obj_nobleman_1.png">
+        </div>
       </section>
-
-      <h4 data-translate="drag"></h4>
 
       <!--<section id="scribe" class="persona">
         <div class="item"><img src="../assets/headdress1.png"></div>
@@ -71,6 +69,7 @@
         <div class="item"><img src="../assets/necklace1.png"></div>
         <div class="item"><img src="../assets/headdress2.png"></div>
       </section>-->
+
     </div>
 
     <div id="gallery" hidden></div>
@@ -85,7 +84,7 @@
   <script src="../libs/jquery.hammer.min.js"></script>
   <script src="js/translate.js"></script>
   <script src="js/camera.js"></script>
-  <script src="js/screensaver.js"></script>
+  <!--<script src="js/screensaver.js"></script>-->
 
 </body>
 </html>
