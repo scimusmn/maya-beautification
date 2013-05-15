@@ -60,7 +60,7 @@ function capture() {
   // Use the canvas to store the image.
   ctx.drawImage(video, 0, 0);
   var img = document.createElement('img');
-  // @BUG - This doesn't always work - maybe 1/10 don't set the image src. Need to figure out why
+  // @BUG - This doesn't always work. Sometimes the src just turns up empty.
   img.src = canvas.toDataURL('image/webp');
 
   // Then set it as the source for the image and append it to the gallery div
@@ -108,46 +108,8 @@ function activate_ui() {
   $items = $('#options-wrapper div.item');
   $items.draggable();
 
-  $('#options-wrapper div.item img').resizable({
-    aspectRatio: true,
-    handles: "n, e, s, w, ne, se, sw, nw",
-    containment: "#gallery"
-  });
-
   // Drop zone on the photo
   $('.droppable').droppable();
-
-  // Lay out the items using dynamic absolute positioning.
-  // This allows them to be resized without pushing each other around, while remaining draggable.
-  // Each item after the first needs to be the height of the first down, plus a 10px margin.
-  $('section.persona').each(function(index)  {
-
-    // Create an array for each group which lists the item heights
-    var heights = [];
-    $('.item', this).each(function (index) {
-
-      // Put the item height into the array
-      heights.push($(this).height());
-
-      // If it's not the first item, figure out how far to push it down the screen
-      if (index > 0) {
-        var offset = 0,
-            margins = 10 * index; // 10px margin between each item
-
-        // Add up the heights of each thing before this item
-        for (var i = 0; i < index; i++) {
-          offset += parseInt(heights[i]);
-        }
-
-        // Add the heights to the margins
-        offset = offset + margins;
-
-        // Position the item
-        $(this).css('top', offset);
-      }
-
-    });
-  });
 
   // Enable navigation between personas
   persona_nav();
