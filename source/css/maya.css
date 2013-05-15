@@ -173,10 +173,30 @@ section#nobleman {
   height: 639px;
   background: url(../../assets/bg_nobleman.jpg) no-repeat;
 }
-#nobleman #obj_1 {
+#nobleman div {
   position: relative;
+}
+#nobleman #obj_1 {
   left: 48px;
   top: 90px;
   height: 314px;
   width: 234px;
+}
+#nobleman #obj_2 {
+  left: 127px;
+  top: -47px;
+  width: 122px;
+  height: 120px;
+}
+#nobleman #obj_3 {
+  left: 547px;
+  top: -347px;
+  width: 182px;
+  height: 157px;
+}
+#nobleman #obj_4 {
+  left: 599px;
+  top: -318px;
+  width: 66px;
+  height: 128px;
 }
