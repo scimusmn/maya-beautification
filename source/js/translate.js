@@ -22,8 +22,7 @@ dictionary = {
     "scribe_text": "Classic Period scribes were probably most often priests or members of noble families, and their skills were highly valued. Depictions of these high-ranking members of the court often show them in a distinctive outfit of a sarong and headcloth with writing implements near at hand, sometimes tucked into their headdresses.",
     "baller_text": "The ornaments and equipment Maya ball players wore probably varied by the location and occasion of each game, but they certainly wore decorative elements in addition to the protection for their knees, elbows and hips. Maya art shows players wearing large, flower shaped ear spools, necklaces, pierced septums, and headdresses that may have represented animal counterparts.",
     "soldier_text": "A Maya soldier’s practical battle kit might include spears, axes, clubs, shields, and quilted cotton armor stuffed with rock salt, but they also decorated themselves for war. Murals show soldiers in full body paint, with black, red or striped bodies, and fierce expressions painted around their eyes and noses. Some officers may also have worn elaborate headdresses, to connect them to warrior lineages or military orders.",
-    "drag": "Drag items from below onto your picture.",
-    "resize": "You can resize items by pinching or stretching them with two or more fingers.",
+    "drag": "Drag highlighted items from the artwork above onto your photo.",
     "retake_photo": "Retake photo"
   },
   "spanish": {
@@ -43,7 +42,6 @@ dictionary = {
     "baller_text": "Los adornos y equipos Maya jugadores de la bola llevaban probablemente variada por el lugar y la ocasión de cada juego, pero ciertamente llevaban elementos decorativos además de la protección de sus rodillas, codos y caderas. Arte maya muestra a los jugadores que llevan grandes carretes de flores en forma de oreja, collares, tabiques perforados, y tocados que pueden haber representado contrapartes animales.",
     "soldier_text": "Kit batalla práctica de un soldado Maya podría incluir lanzas, hachas, palos, escudos y armaduras de algodón acolchado relleno de sal de roca, pero también decorada para la guerra. Murales muestran soldados en la pintura de cuerpo completo, con cuerpo negro, rojo o rayas, y expresiones feroces pintados alrededor de los ojos y la nariz. Algunos agentes también pueden haber llevado elaborados tocados, para conectarlos a los linajes guerrero u órdenes militares.",
     "drag": "Arrastre los elementos de abajo en su imagen.",
-    "resize": "Usted puede cambiar el tamaño de los elementos pellizcando o estiramiento con dos o más dedos.",
     "retake_photo": "Retomar foto"
   }
 };
