@@ -11,6 +11,11 @@
  * - Maybe add a Done button that "saves" the compiled image and displays it next to the artwork (like for a picture postcard)
  * - Maybe actually save that photo and allow it to be emailed.
  */
+
+/**
+ * Initialize jQuery UI plugins and persona navigation.
+ * This is called once we have an image of the visitor ready.
+ */
 function activate_ui() {
 
   // Make beauty options draggable and resizable
@@ -20,14 +25,20 @@ function activate_ui() {
   // Drop zone on the photo
   $('.droppable').droppable();
 
+  // Turn on the item edit tools
+  $('.item').dblclick(function() {
+    var activeItem = this;
+    item_editor(activeItem);
+  });
+
   // Enable navigation between personas
   persona_nav();
 
 }
 
 /**
- * Persona selection
- * When a persona option is tapped, load that section's text and beauty options
+ * Persona navigation.
+ * When a persona option is tapped, load that section's text and beauty options.
  */
 function persona_nav() {
 
@@ -58,3 +69,20 @@ function persona_nav() {
   });
 
 }
+
+/**
+ * Tools to edit an item.
+ * Items can be resized, rotated, or flipped horizontally.
+ */
+var item_editor = function(activeItem) {
+
+  // Edit tools
+  var $toolbox = $('#toolbox');
+
+  // Show the toolbox near the selected item
+  $toolbox.prependTo(activeItem);
+  $toolbox.fadeIn('fast');
+
+}
+
+
