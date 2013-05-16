@@ -173,28 +173,28 @@ section#nobleman {
   height: 639px;
   background: url(../../assets/bg_nobleman.jpg) no-repeat;
 }
-#nobleman div {
+#nobleman div img {
   position: relative;
 }
-#nobleman #obj_1 {
+#nobleman #obj_1 img {
   left: 48px;
   top: 90px;
   height: 314px;
   width: 234px;
 }
-#nobleman #obj_2 {
+#nobleman #obj_2 img {
   left: 127px;
   top: -47px;
   width: 122px;
   height: 120px;
 }
-#nobleman #obj_3 {
+#nobleman #obj_3 img {
   left: 547px;
   top: -347px;
   width: 182px;
   height: 157px;
 }
-#nobleman #obj_4 {
+#nobleman #obj_4 img {
   left: 599px;
   top: -318px;
   width: 66px;
