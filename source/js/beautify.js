@@ -27,8 +27,7 @@ function activate_ui() {
 
   // Turn on the item edit tools
   $('.item').dblclick(function() {
-    var activeItem = this;
-    item_editor(activeItem);
+    item_editor(this);
   });
 
   // Enable navigation between personas
@@ -82,6 +81,11 @@ var item_editor = function(activeItem) {
   // Show the toolbox near the selected item
   $toolbox.appendTo(activeItem);
   $toolbox.fadeIn('fast');
+
+  // Flip button
+  $('div#flip').click(function() {
+    $('#' + activeItem.id + ' img').toggleClass('flipped');
+  });
 
 }
 
