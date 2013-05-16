@@ -80,7 +80,7 @@ var item_editor = function(activeItem) {
   var $toolbox = $('#toolbox');
 
   // Show the toolbox near the selected item
-  $toolbox.prependTo(activeItem);
+  $toolbox.appendTo(activeItem);
   $toolbox.fadeIn('fast');
 
 }

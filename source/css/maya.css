@@ -214,6 +214,9 @@ section#nobleman {
   text-align: center;
   font-size: 24px;
   clear: both;
+  position: relative;
+  top: -150px; /* @TODO - this should be dynamic, based on item height */
+  left: 200px;
 }
 #toolbox div:first-child {
   padding-top: 12px;
