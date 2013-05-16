@@ -1,6 +1,7 @@
 /**
- * Use the computer's webcam to capture an image
- */
+ * Use the computer's webcam to capture video of the visitor,
+ * then use <canvas> to render it as an image.
+*/
 
 // getUserMedia is currently vendor prefixed
 navigator.getUserMedia = navigator.webkitGetUserMedia || navigator.getUserMedia;
@@ -60,7 +61,7 @@ function capture() {
   // Use the canvas to store the image.
   ctx.drawImage(video, 0, 0);
   var img = document.createElement('img');
-  // @BUG - This doesn't always work. Sometimes the src just turns up empty.
+  // @TODO - This doesn't always work. Sometimes the src just turns up empty. Fix that or write a fallback to re-shoot.
   img.src = canvas.toDataURL('image/webp');
 
   // Then set it as the source for the image and append it to the gallery div
@@ -96,56 +97,5 @@ function countdown(button, seconds) {
       clearInterval(interval);
     }
   }, 1000);
-
-}
-
-/**
- * Initialize jQuery UI interactions
- */
-function activate_ui() {
-
-  // Make beauty options draggable and resizable
-  $items = $('#options-wrapper div.item');
-  $items.draggable();
-
-  // Drop zone on the photo
-  $('.droppable').droppable();
-
-  // Enable navigation between personas
-  persona_nav();
-
-}
-
-/**
- * Persona selection
- * When a persona option is tapped, load that section's text and beauty options
- */
-function persona_nav() {
-
-  var selected_persona = $('#characters li.active').attr('id');
-
-  // Hide sections after the initial page load
-  // Hiding them before, like with CSS, breaks drag/drop/resize since the item size can't be determined
-  $('#options-wrapper section').not('.active').hide();
-
-  // Update visible elements when an option is clicked
-  $('ul#characters li').click(function() {
-
-    // Hide currently visible persona text and items
-    $('#options-wrapper section').hide();
-    $('.active').not('li').hide();
-    $('.active').removeClass('active');
-
-    // Activate the new selection
-    selected_persona = $(this).attr('id');
-    var selected_persona_name = $(this).text();
-
-    $('p.' + selected_persona).add('#' + selected_persona).addClass('active');
-    $('#options-wrapper section#' + selected_persona + ' div').add('#options-wrapper section#' + selected_persona).show();
-
-    // Update the text
-    $('p.' + selected_persona).fadeIn('fast');
-
-  });
 
 }
