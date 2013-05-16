@@ -200,3 +200,27 @@ section#nobleman {
   width: 66px;
   height: 128px;
 }
+
+/* Edit tools */
+#toolbox {
+  display: none;
+  width: 150px;
+  height: 150px;
+  color: #FFFFFF;
+  font-weight: bold;
+  opacity: .75;
+  background: #000000;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 24px;
+  clear: both;
+}
+#toolbox div:first-child {
+  padding-top: 12px;
+}
+#toolbox div {
+  padding: 0 0 4px 0;
+}
+
+
+
