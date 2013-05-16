@@ -12,6 +12,7 @@ module.exports = function(grunt) {
               'libs/jquery.ui.touch-punch.min.js',
               'source/js/translate.js',
               'source/js/camera.js',
+              'source/js/beautify.js',
               'source/js/screensaver.js'
             ]
           }
