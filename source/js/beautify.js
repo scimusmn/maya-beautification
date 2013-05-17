@@ -62,6 +62,11 @@ var item_editor = function(activeItem) {
   // Show the toolbox
   $toolbox.fadeIn('fast');
 
+  // Allow it to be draggable
+  $toolbox.draggable({
+    containment: '#gallery'
+  });
+
   // @DEBUG
   console.log('Toolbox opened for ' + activeItem.id);
 
@@ -99,6 +104,14 @@ var item_editor = function(activeItem) {
     // @DEBUG
     console.log('Shrunk ' + activeItem.id);
   });
+
+  // Close the toolbox when the X is clicked
+  $('span#close').click(function() {
+    $('#toolbox').fadeOut('fast');
+  });
+
+  // If a different item is clicked, update activeItem
+
 
 }
 
