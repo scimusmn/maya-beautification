@@ -19,7 +19,7 @@
 var activate_ui = function() {
 
   // Make beauty options draggable
-  $('div.item img').draggable(); // @TODO add class after drop that removes border
+  $('section img').draggable(); // @TODO add class after drop that removes border
 
   // Drop zone on the photo
   $('#gallery').droppable({

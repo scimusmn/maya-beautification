@@ -169,8 +169,7 @@ section#nobleman {
   height: 639px;
   background: url(../../assets/bg_nobleman.jpg) no-repeat;
 }
-section div img {
-  position: relative;
+section img {
   border: 3px solid yellow;
   border-radius: 10px;
 }
@@ -179,28 +178,29 @@ img.ui-draggable-dragging {
 }
 img.dropped {
   border: none;
+  padding: 3px;
 }
-#nobleman #obj_1 img {
-  left: 52px;
-  top: 95px;
+#nobleman img#obj_1 {
+  left: 48px;
+  top: 93px;
   height: 314px;
   width: 234px;
 }
-#nobleman #obj_2 img {
-  left: 127px;
-  top: -47px;
+#nobleman img#obj_2 {
+  left: -121px;
+  top: 72px;
   width: 122px;
   height: 120px;
 }
-#nobleman #obj_3 img {
-  left: 547px;
-  top: -354px;
+#nobleman img#obj_3 {
+  left: 167px;
+  top: -73px;
   width: 182px;
   height: 157px;
 }
-#nobleman #obj_4 img {
-  left: 599px;
-  top: -330px;
+#nobleman img#obj_4 {
+  left: 29px;
+  top: 87px;
   width: 66px;
   height: 128px;
 }
