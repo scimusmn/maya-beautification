@@ -28,6 +28,8 @@ var activate_ui = function() {
   // Turn on the item edit tools
   $('.item').dblclick(function() {
     item_editor(this);
+    // @DEBUG
+    console.log('Active item: ' + this.id);
   });
 
   // Enable navigation between personas
@@ -83,9 +85,14 @@ var item_editor = function(activeItem) {
   $toolbox.appendTo(activeItem);
   $toolbox.fadeIn('fast');
 
+  // @DEBUG
+  console.log('Toolbox opened for ' + activeItem.id);
+
   // Flip button
   $('div#flip').click(function() {
     $image.toggleClass('flipped');
+    // @DEBUG
+    console.log('Flipped ' + activeItem.id);
   });
 
   // Resize buttons
@@ -99,7 +106,10 @@ var item_editor = function(activeItem) {
       height: currentHeight + 20,
       width: currentWidth + 20
     });
+    // @DEBUG
+    console.log('Enlarged ' + activeItem.id);
   });
+
   $('div.resize #smaller').click(function() {
     // Figure out the current size
     var currentHeight = $(this).height(),
@@ -109,6 +119,8 @@ var item_editor = function(activeItem) {
       height: currentHeight - 20,
       width: currentWidth - 20
     });
+    // @DEBUG
+    console.log('Shrunk ' + activeItem.id);
   });
 
 }
