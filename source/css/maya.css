@@ -164,10 +164,6 @@ li.active {
 }
 
 /* Artwork and items */
-.item img {
-}
-.item.ui-draggable-dragging {
-}
 section#nobleman {
   width: 960px;
   height: 639px;
@@ -175,10 +171,15 @@ section#nobleman {
 }
 #nobleman div img {
   position: relative;
+  border: 3px solid yellow;
+  border-radius: 10px;
+}
+#nobleman div img.ui-draggable-dragging {
+  border: 3px solid blue;
 }
 #nobleman #obj_1 img {
-  left: 48px;
-  top: 90px;
+  left: 52px;
+  top: 95px;
   height: 314px;
   width: 234px;
 }
@@ -190,13 +191,13 @@ section#nobleman {
 }
 #nobleman #obj_3 img {
   left: 547px;
-  top: -347px;
+  top: -354px;
   width: 182px;
   height: 157px;
 }
 #nobleman #obj_4 img {
   left: 599px;
-  top: -318px;
+  top: -330px;
   width: 66px;
   height: 128px;
 }
@@ -205,7 +206,7 @@ section#nobleman {
 #toolbox {
   display: none;
   width: 150px;
-  height: 150px;
+  height: 110px;
   color: #FFFFFF;
   font-weight: bold;
   opacity: .75;
@@ -213,10 +214,6 @@ section#nobleman {
   border-radius: 8px;
   text-align: center;
   font-size: 24px;
-  clear: both;
-  position: relative;
-  top: -150px; /* @TODO - this should be dynamic, based on item height */
-  left: 200px;
 }
 #toolbox div:first-child {
   padding-top: 12px;
