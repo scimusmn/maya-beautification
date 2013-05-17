@@ -32,9 +32,15 @@ var activate_ui = function() {
       ui.draggable.addClass('dropped');
     }
   });
+  // Drop zone on the artwork
+  $('section.persona').droppable({
+    drop: function(event, ui) {
+      ui.draggable.removeClass('dropped');
+    }
+  });
 
   // Turn on the item edit tools
-  $('.item').dblclick(function() {
+  $('section img').dblclick(function() {
 
     item_editor(this);
 
