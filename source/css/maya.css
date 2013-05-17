@@ -70,6 +70,7 @@ button.small {
   margin: 10px 0;
   float: left;
   clear: both;
+  display: none;
 }
 
 /* Language switcher */
@@ -133,7 +134,7 @@ button.small {
 #personas p {
   margin: 0 0 22px 0;
 }
-#options-wrapper {
+#draggable-wrapper {
   float: left;
   clear: both;
 }

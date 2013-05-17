@@ -18,8 +18,13 @@
  */
 var activate_ui = function() {
 
+  // Show the Retake button
+  $('button.small').show();
+
   // Make beauty options draggable
-  $('section img').draggable(); // @TODO add class after drop that removes border
+  $('section img').draggable({
+    containment: '#draggable-wrapper'
+  });
 
   // Drop zone on the photo
   $('#gallery').droppable({
@@ -52,13 +57,13 @@ var persona_nav = function() {
 
   // Hide sections after the initial page load
   // Hiding them before, like with CSS, breaks drag/drop/resize since the item size can't be determined
-  $('#options-wrapper section').not('.active').hide();
+  $('#draggable-wrapper section').not('.active').hide();
 
   // Update visible elements when an option is clicked
   $('ul#characters li').click(function() {
 
     // Hide currently visible persona text and items
-    $('#options-wrapper section').hide();
+    $('#draggable-wrapper section').hide();
     $('.active').not('li').hide();
     $('.active').removeClass('active');
 
@@ -67,7 +72,7 @@ var persona_nav = function() {
     var selected_persona_name = $(this).text();
 
     $('p.' + selected_persona).add('#' + selected_persona).addClass('active');
-    $('#options-wrapper section#' + selected_persona + ' div').add('#options-wrapper section#' + selected_persona).show();
+    $('#draggable-wrapper section#' + selected_persona + ' div').add('#draggable-wrapper section#' + selected_persona).show();
 
     // Update the text
     $('p.' + selected_persona).fadeIn('fast');
