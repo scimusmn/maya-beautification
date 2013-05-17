@@ -42,7 +42,7 @@ var activate_ui = function() {
   // Turn on the item edit tools
   $('section img').dblclick(function() {
 
-    item_editor(this);
+    item_editor($(this));
 
     // @DEBUG
     console.log('Active item: ' + this.id);
@@ -50,40 +50,6 @@ var activate_ui = function() {
 
   // Enable navigation between personas
   persona_nav();
-
-}
-
-/**
- * Persona navigation.
- * When a persona option is tapped, load that section's text and beauty options.
- */
-var persona_nav = function() {
-
-  var selected_persona = $('#characters li.active').attr('id');
-
-  // Hide sections after the initial page load
-  // Hiding them before, like with CSS, breaks drag/drop/resize since the item size can't be determined
-  $('#draggable-wrapper section').not('.active').hide();
-
-  // Update visible elements when an option is clicked
-  $('ul#characters li').click(function() {
-
-    // Hide currently visible persona text and items
-    $('#draggable-wrapper section').hide();
-    $('.active').not('li').hide();
-    $('.active').removeClass('active');
-
-    // Activate the new selection
-    selected_persona = $(this).attr('id');
-    var selected_persona_name = $(this).text();
-
-    $('p.' + selected_persona).add('#' + selected_persona).addClass('active');
-    $('#draggable-wrapper section#' + selected_persona + ' div').add('#draggable-wrapper section#' + selected_persona).show();
-
-    // Update the text
-    $('p.' + selected_persona).fadeIn('fast');
-
-  });
 
 }
 
@@ -141,4 +107,37 @@ var item_editor = function(activeItem) {
 
 }
 
+/**
+ * Persona navigation.
+ * When a persona option is tapped, load that section's text and beauty options.
+ */
+var persona_nav = function() {
+
+  var selected_persona = $('#characters li.active').attr('id');
+
+  // Hide sections after the initial page load
+  // Hiding them before, like with CSS, breaks drag/drop/resize since the item size can't be determined
+  $('#draggable-wrapper section').not('.active').hide();
+
+  // Update visible elements when an option is clicked
+  $('ul#characters li').click(function() {
+
+    // Hide currently visible persona text and items
+    $('#draggable-wrapper section').hide();
+    $('.active').not('li').hide();
+    $('.active').removeClass('active');
+
+    // Activate the new selection
+    selected_persona = $(this).attr('id');
+    var selected_persona_name = $(this).text();
+
+    $('p.' + selected_persona).add('#' + selected_persona).addClass('active');
+    $('#draggable-wrapper section#' + selected_persona + ' div').add('#draggable-wrapper section#' + selected_persona).show();
+
+    // Update the text
+    $('p.' + selected_persona).fadeIn('fast');
+
+  });
+
+}
 
