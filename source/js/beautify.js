@@ -18,16 +18,17 @@
  */
 var activate_ui = function() {
 
-  // Make beauty options draggable and resizable
-  $items = $('#options-wrapper div.item');
-  $items.draggable();
+  // Make beauty options draggable
+  $('div.item img').draggable(); // @TODO add class after drop that removes border
 
   // Drop zone on the photo
   $('.droppable').droppable();
 
   // Turn on the item edit tools
   $('.item').dblclick(function() {
+
     item_editor(this);
+
     // @DEBUG
     console.log('Active item: ' + this.id);
   });
@@ -99,8 +100,8 @@ var item_editor = function(activeItem) {
   // @TODO - less redundancy; figure out max/min
   $('div.resize #bigger').click(function() {
     // Figure out the current size
-    var currentHeight = $(this).height(),
-        currentWidth = $(this).width();
+    var currentHeight = this.height(),
+        currentWidth = this.width();
     // Animate it to 20px bigger
     $image.animate({
       height: currentHeight + 20,
@@ -112,8 +113,8 @@ var item_editor = function(activeItem) {
 
   $('div.resize #smaller').click(function() {
     // Figure out the current size
-    var currentHeight = $(this).height(),
-        currentWidth = $(this).width();
+    var currentHeight = this.height(),
+        currentWidth = this.width();
     // Animate it to 20px smaller
     $image.animate({
       height: currentHeight - 20,
