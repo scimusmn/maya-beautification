@@ -16,7 +16,7 @@
  * Initialize jQuery UI plugins and persona navigation.
  * This is called once we have an image of the visitor ready.
  */
-function activate_ui() {
+var activate_ui = function() {
 
   // Make beauty options draggable and resizable
   $items = $('#options-wrapper div.item');
@@ -39,7 +39,7 @@ function activate_ui() {
  * Persona navigation.
  * When a persona option is tapped, load that section's text and beauty options.
  */
-function persona_nav() {
+var persona_nav = function() {
 
   var selected_persona = $('#characters li.active').attr('id');
 
@@ -76,7 +76,8 @@ function persona_nav() {
 var item_editor = function(activeItem) {
 
   // Edit tools
-  var $toolbox = $('#toolbox');
+  var $toolbox = $('#toolbox'),
+      $image = $('#' + activeItem.id + ' img'); // Image we're editing
 
   // Show the toolbox near the selected item
   $toolbox.appendTo(activeItem);
@@ -84,9 +85,16 @@ var item_editor = function(activeItem) {
 
   // Flip button
   $('div#flip').click(function() {
-    $('#' + activeItem.id + ' img').toggleClass('flipped');
+    $image.toggleClass('flipped');
   });
 
+  // Resize buttons
+  $('div.resize').click(function() {
+    $image.animate({
+      //height: 20px,
+      //width: 20px
+    });
+  });
 }
 
 
