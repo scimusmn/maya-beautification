@@ -169,13 +169,16 @@ section#nobleman {
   height: 639px;
   background: url(../../assets/bg_nobleman.jpg) no-repeat;
 }
-#nobleman div img {
+section div img {
   position: relative;
   border: 3px solid yellow;
   border-radius: 10px;
 }
-#nobleman div img.ui-draggable-dragging {
+img.ui-draggable-dragging {
   border: 3px solid blue;
+}
+img.dropped {
+  border: none;
 }
 #nobleman #obj_1 img {
   left: 52px;

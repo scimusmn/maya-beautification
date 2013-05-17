@@ -22,7 +22,11 @@ var activate_ui = function() {
   $('div.item img').draggable(); // @TODO add class after drop that removes border
 
   // Drop zone on the photo
-  $('.droppable').droppable();
+  $('#gallery').droppable({
+    drop: function(event, ui) {
+      ui.draggable.addClass('dropped');
+    }
+  });
 
   // Turn on the item edit tools
   $('.item').dblclick(function() {
