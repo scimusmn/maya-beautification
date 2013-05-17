@@ -41,11 +41,7 @@ var activate_ui = function() {
 
   // Turn on the item edit tools
   $('section img').dblclick(function() {
-
-    item_editor($(this));
-
-    // @DEBUG
-    console.log('Active item: ' + this.id);
+    item_editor(this);
   });
 
   // Enable navigation between personas
@@ -59,12 +55,11 @@ var activate_ui = function() {
  */
 var item_editor = function(activeItem) {
 
-  // Edit tools
-  var $toolbox = $('#toolbox'),
-      $image = $('#' + activeItem.id + ' img'); // Image we're editing
+  // Set some variables
+  var $activeItem = $(activeItem), // jQuery object
+      $toolbox = $('#toolbox'); // Edit tools
 
-  // Show the toolbox near the selected item
-  $toolbox.appendTo(activeItem);
+  // Show the toolbox
   $toolbox.fadeIn('fast');
 
   // @DEBUG
@@ -72,7 +67,7 @@ var item_editor = function(activeItem) {
 
   // Flip button
   $('div#flip').click(function() {
-    $image.toggleClass('flipped');
+    $activeItem.toggleClass('flipped');
     // @DEBUG
     console.log('Flipped ' + activeItem.id);
   });
