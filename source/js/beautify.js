@@ -89,12 +89,28 @@ var item_editor = function(activeItem) {
   });
 
   // Resize buttons
-  $('div.resize').click(function() {
+  // @TODO - less redundancy; figure out max/min
+  $('div.resize #bigger').click(function() {
+    // Figure out the current size
+    var currentHeight = $(this).height(),
+        currentWidth = $(this).width();
+    // Animate it to 20px bigger
     $image.animate({
-      //height: 20px,
-      //width: 20px
+      height: currentHeight + 20,
+      width: currentWidth + 20
     });
   });
+  $('div.resize #smaller').click(function() {
+    // Figure out the current size
+    var currentHeight = $(this).height(),
+        currentWidth = $(this).width();
+    // Animate it to 20px smaller
+    $image.animate({
+      height: currentHeight - 20,
+      width: currentWidth - 20
+    });
+  });
+
 }
 
 
