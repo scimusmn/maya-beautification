@@ -164,11 +164,7 @@ li.active {
 /* Artwork and items */
 section {
   position: relative;
-}
-section#nobleman {
   width: 960px;
-  height: 639px;
-  background: url(../../assets/bg_nobleman.jpg) no-repeat;
 }
 section img {
   border: 3px solid yellow;
@@ -186,29 +182,58 @@ img.activeItem {
   border: 3px dotted #FFF;
   padding: 0px;
 }
-#nobleman img#obj_1 {
+
+section#nobleman {
+  height: 639px;
+  background: url(../../assets/bg_nobleman.jpg) no-repeat;
+}
+#nobleman img.obj_1 {
   left: 43px;
   top: 90px;
   height: 314px;
   width: 234px;
 }
-#nobleman img#obj_2 {
+#nobleman img.obj_2 {
   left: 123px;
   top: 264px;
   width: 122px;
   height: 120px;
 }
-#nobleman img#obj_3 {
+#nobleman img.obj_3 {
   left: 543px;
   top: 85px;
   width: 182px;
   height: 157px;
 }
-#nobleman img#obj_4 {
+#nobleman img.obj_4 {
   left: 596px;
   top: 271px;
   width: 66px;
   height: 128px;
+}
+
+section#scribe {
+  height: 391px;
+  background: url(../../assets/bg_scribes.jpg) no-repeat;
+}
+section#baller {
+  height: 402px;
+  background: url(../../assets/bg_ballers.jpg) no-repeat;
+}
+section#soldier {
+  height: 395px;
+  background: url(../../assets/bg_soldiers.jpg) no-repeat;
+}
+
+section#noblewoman {
+  height: 594px;
+  background: url(../../assets/bg_noblewoman.jpg) no-repeat;
+}
+#noblewoman img.obj_1 {
+  height: 121px;
+  width: 119px;
+  left: 88px;
+  top: 37px;
 }
 
 /* Edit tools */
