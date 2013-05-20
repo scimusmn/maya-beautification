@@ -133,10 +133,7 @@ var persona_nav = function() {
     var selected_persona_name = $(this).text();
 
     $('p.' + selected_persona).add('#' + selected_persona).addClass('active');
-    $('#draggable-wrapper section#' + selected_persona + ' div').add('#draggable-wrapper section#' + selected_persona).show();
-
-    // Update the text
-    $('p.' + selected_persona).fadeIn('fast');
+    $('#draggable-wrapper section#' + selected_persona).add($('p.' + selected_persona)).fadeIn(700);
 
   });
 
