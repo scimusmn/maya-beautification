@@ -181,6 +181,10 @@ img.dropped {
   border: none;
   padding: 3px;
 }
+img.activeItem {
+  border: 3px dotted #FFF;
+  padding: 0px;
+}
 #nobleman img#obj_1 {
   left: 48px;
   top: 93px;
