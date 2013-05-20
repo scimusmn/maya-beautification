@@ -5,7 +5,6 @@
  * to drag, drop, resize, and rotate items from a piece of Mayan artwork onto their own photo.
  *
  * @TODO:
- * - Make the "Edit Item" tools: resize, rotate, flip horizontal
  * - Maybe add a Done button that "saves" the compiled image and displays it next to the artwork (like for a picture postcard)
  * - Maybe actually save that photo and allow it to be emailed.
  */
@@ -85,24 +84,27 @@ $(function() {
   });
 
   // Resize buttons
-  /*$('#bigger').click(function() {
+  $('#bigger').click(function() {
     // Figure out the current size
-    var currentHeight = $activeItem.height(),
-        currentWidth = $activeItem.width();
+    var currentHeight = $('.activeItem').height(),
+        currentWidth = $('.activeItem').width();
     // Animate it to 20px bigger
-    $activeItem.animate({
-      height: currentHeight + 20,
-      width: currentWidth + 20
+    $('.activeItem').animate({
+      height: currentHeight + 50,
+      width: currentWidth + 50
     });
   });
 
   $('#smaller').click(function() {
+    // Figure out the current size
+    var currentHeight = $('.activeItem').height(),
+        currentWidth = $('.activeItem').width();
     // Animate it to 20px smaller
-    $activeItem.animate({
-      height: currentHeight - 20,
-      width: currentWidth - 20
+    $('.activeItem').animate({
+      height: currentHeight - 50,
+      width: currentWidth - 50
     });
-  });*/
+  });
 
 });
 
