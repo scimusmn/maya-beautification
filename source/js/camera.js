@@ -3,69 +3,131 @@
  * then use <canvas> to render it as an image.
 */
 
-// getUserMedia is currently vendor prefixed
-navigator.getUserMedia = navigator.webkitGetUserMedia || navigator.getUserMedia;
-window.URL = window.URL || window.webkitURL;
+var video;
+var canvas;
+var context;
+var imageFilter;
 
-// set some variables
-var app = document.getElementById('app');
-var video = document.getElementById('monitor');
-var canvas = document.getElementById('photo');
-var gallery = document.getElementById('gallery');
-var ctx = canvas.getContext('2d');
+// Alias the vendor prefixed variants of getUserMedia so we can access them
+// via navigator.getUserMedia
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia ||
+  navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
-// Start up the camera when the page loads
-$(document).ready(function() {
-  if (!navigator.getUserMedia) {
-    document.getElementById('errorMessage').innerHTML = 'Sorry. <code>navigator.getUserMedia()</code> is not available.';
-    return;
+// Alias the vendor prefixed variants of the URL object so that we can access them
+// via window.URL
+window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;
+
+// Alias the vendor prefixed variants of requestAnimationFrame so that we can access
+// them via window.requestAnimationFrame fallback to setTimeout at 60hz if not supported.
+window.requestAnimationFrame = (function(){
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          window.oRequestAnimationFrame      ||
+          window.msRequestAnimationFrame     ||
+          function( callback ){
+            window.setTimeout(callback, 1000 / 60);
+          };
+})();
+
+// This function will be called if a webcam is available and the user has
+// granted access for the web application to use it.
+function successCallback(stream) {
+  // Firefox has a special property that you can use to associate the stream with the
+  // video object.  Other browsers require you to use createObjectURL.
+  if (video.mozSrcObject !== undefined) {
+    video.mozSrcObject = stream;
   }
-  navigator.getUserMedia({video: true}, gotStream, noStream);
-});
-
-// Get the video stream, and set it as the video source
-function gotStream(stream) {
-  if (window.URL) {
-    video.src = window.URL.createObjectURL(stream);
-  } else {
-    video.src = stream; // Opera.
+  else {
+    video.src = (window.URL && window.URL.createObjectURL(stream)) || stream;
   }
-  video.onerror = function(e) {
-    stream.stop();
-  };
-  stream.onended = noStream;
+  video.play();
 
-  // Set the canvas to the size of the captured video
-  setTimeout(function() {
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
-  }, 50);
+  // Show the DOM elements that contain the rest of the UI
+  document.querySelector("#monitor").style.display = "inline";
+
+  // capture the first frame of video and start the animation loop that
+  // continuously update the video to the screen
+  update();
 }
 
-/**
- * Fallback for errors
- */
-function noStream(e) {
-  var msg = 'No camera available.';
-  if (e.code == 1) {
-    msg = 'User denied access to use camera.';
-  }
-  document.getElementById('errorMessage').textContent = msg;
+// This function will be called if there is no webcam available or the user has
+// denied access for the web application to use it.
+function failureCallback() {
+  showStatus("No camera is available or you have denied access.");
 }
+
+function processImage() {
+  if (canvas.width > 0 && canvas.height > 0) {
+    if (imageFilter) {
+      context.putImageData(imageFilter.apply(null, [context.getImageData(0, 0,
+        canvas.width, canvas.height)]), 0, 0);
+    }
+  }
+}
+
+function processVideoFrame() {
+  // We have to check for the video dimensions here.
+  // Dimensions will be zero until they can be determined from the stream.
+  if (context && video.videoWidth > 0 && video.videoHeight > 0) {
+    // Resize the canvas to match the current video dimensions
+    if (canvas.width != video.videoWidth)
+      canvas.width = video.videoWidth;
+    if (canvas.height != video.videoHeight)
+      canvas.height = video.videoHeight;
+
+    // Copy the current video frame by drawing it onto the canvas's context
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    processImage(canvas);
+  }
+}
+
+function update(){
+  processVideoFrame();
+  requestAnimationFrame(update);
+};
+
+function onLoad() {
+
+  // Get the DOM object that matches the first video tag on the page
+  video = document.querySelector('video');
+
+  canvas = document.querySelector("canvas");
+  context = canvas.getContext("2d");
+
+  // We can retrieve the video dimensions from the video object once we have
+  // registered for and received the loadeddata event
+  video.addEventListener('loadeddata', function(e) {
+    console.log('loadeddata Video dimensions: ' + video.videoWidth + ' x ' + video.videoHeight);
+    }, false);
+
+  video.addEventListener('playing', function(e) {
+    console.log('play Video dimensions: ' + video.videoWidth + ' x ' + video.videoHeight);
+    }, false);
+
+  if (navigator.getUserMedia) {
+    // Ask the user for access to the camera
+    navigator.getUserMedia({video: true}, successCallback, failureCallback);
+  }
+  else {
+    showStatus('The navigator.getUserMedia() method not supported in this browser.');
+  }
+}
+
 
 /**
  * This runs when the user taps "Click Photo"
  */
 function capture() {
 
-  // Use the canvas to store the image.
-  ctx.drawImage(video, 0, 0);
-  var img = document.createElement('img');
-  // @TODO - This doesn't always work. Sometimes the src just turns up empty. Fix that or write a fallback to re-shoot.
-  img.src = canvas.toDataURL('image/webp');
+  var url = canvas.toDataURL();
+  console.log(url);
+
+  // Set the src of the image url to the data url
+  document.querySelector('#gallery img').src = url;
 
   // Then set it as the source for the image and append it to the gallery div
-  $('#gallery').append(img).fadeIn('slow');
+  $('#gallery').fadeIn('slow');
 
   // Hide step 1, show step 2
   document.getElementById('step-1').hidden = true;

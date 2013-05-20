@@ -78,36 +78,30 @@ var item_editor = function(activeItem) {
  * Click handlers for toolbox buttons.
  */
 $(function() {
+
+  // Flip button
   $('div#flip').click(function () {
     $('.activeItem').toggleClass('flipped');
   });
 
   // Resize buttons
-  // @TODO - less redundancy; figure out max/min
-  /*$('div.resize #bigger').click(function() {
+  /*$('#bigger').click(function() {
     // Figure out the current size
-    var currentHeight = this.height(),
-        currentWidth = this.width();
+    var currentHeight = $activeItem.height(),
+        currentWidth = $activeItem.width();
     // Animate it to 20px bigger
-    $image.animate({
+    $activeItem.animate({
       height: currentHeight + 20,
       width: currentWidth + 20
     });
-    // @DEBUG
-    console.log('Enlarged ' + activeItem.id);
   });
 
-  $('div.resize #smaller').click(function() {
-    // Figure out the current size
-    var currentHeight = this.height(),
-        currentWidth = this.width();
+  $('#smaller').click(function() {
     // Animate it to 20px smaller
-    $image.animate({
+    $activeItem.animate({
       height: currentHeight - 20,
       width: currentWidth - 20
     });
-    // @DEBUG
-    console.log('Shrunk ' + activeItem.id);
   });*/
 
 });
