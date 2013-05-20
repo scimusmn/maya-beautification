@@ -15,7 +15,6 @@
   <div id="step-1">
     <p data-translate="intro_text"></p>
     <p><strong data-translate="step1_instructions"></strong></p>
-    <p id="errorMessage"></p>
     <section id="app">
       <div class="container">
         <video id="monitor" style="display:none;" autoplay></video>
@@ -23,7 +22,7 @@
       </section>
       <div id="timer"></div>
     <canvas id="photo" style="display:none"></canvas>
-    <p id="take-photo" class="button"><button data-translate="take_photo" onclick="countdown(this, 2)"></button></p>
+    <p id="take-photo" class="button"><button data-translate="take_photo" onclick="countdown(this, 1)"></button></p>
   </div>
 
   <div id="step-2" hidden>
@@ -31,34 +30,38 @@
       <h2 data-translate="choose_persona"></h2>
       <ul id="characters">
         <li data-translate="nobleman" id="nobleman" class="active"></li>
-        <!--<li data-translate="scribe" id="scribe" ></li>
+        <li data-translate="scribe" id="scribe" ></li>
         <li data-translate="noblewoman" id="noblewoman"></li>
         <li data-translate="baller" id="baller"></li>
-        <li data-translate="soldier" id="soldier"></li>-->
+        <li data-translate="soldier" id="soldier"></li>
       </ul>
       <p data-translate="nobleman_text" class="persona nobleman active"></p>
-      <!--<p data-translate="scribe_text" class="persona container"></p>
+      <p data-translate="scribe_text" class="persona scribe"></p>
       <p data-translate="noblewoman_text" class="persona noblewoman"></p>
       <p data-translate="baller_text" class="persona baller"></p>
-      <p data-translate="soldier_text" class="persona soldier"></p>-->
+      <p data-translate="soldier_text" class="persona soldier"></p>
     </div>
     <div id="draggable-wrapper">
 
       <section id="nobleman" class="persona active">
-        <img id="obj_1" src="../assets/obj_nobleman_1_lg.png">
-        <img id="obj_2" src="../assets/obj_nobleman_2_lg.png">
-        <img id="obj_3" src="../assets/obj_nobleman_3_lg.png">
-        <img id="obj_4" src="../assets/obj_nobleman_4_lg.png">
+        <img class="obj_1" src="../assets/obj_nobleman_1.png">
+        <img class="obj_2" src="../assets/obj_nobleman_2.png">
+        <img class="obj_3" src="../assets/obj_nobleman_3.png">
+        <img class="obj_4" src="../assets/obj_nobleman_4.png">
       </section>
 
-      <!--<section id="scribe" class="persona">
+      <section id="scribe" class="persona">
       </section>
+
       <section id="baller" class="persona">
       </section>
+
       <section id="soldier" class="persona">
       </section>
+
       <section id="noblewoman" class="persona">
-      </section>-->
+        <img class="obj_1" src="../assets/obj_noblewoman_1.png">
+      </section>
 
       <div id="gallery" hidden><img src=""></div>
 
