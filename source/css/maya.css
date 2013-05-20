@@ -216,10 +216,25 @@ section#scribe {
   height: 391px;
   background: url(../../assets/bg_scribes.jpg) no-repeat;
 }
+
 section#baller {
-  height: 402px;
+  height: 573px;
   background: url(../../assets/bg_ballers.jpg) no-repeat;
 }
+#baller img.obj_1 {
+  height: 114px;
+  width: 197px;
+  left: 19px;
+  top: 76px;
+}
+#baller img.obj_2 {
+  width: 213px;
+  height: 202px;
+  left: 487px;
+  top: 105px;
+}
+
+
 section#soldier {
   height: 395px;
   background: url(../../assets/bg_soldiers.jpg) no-repeat;
