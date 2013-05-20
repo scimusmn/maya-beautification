@@ -5,8 +5,6 @@
  * to drag, drop, resize, and rotate items from a piece of Mayan artwork onto their own photo.
  *
  * @TODO:
- * - Some sort of cool animation/glow effect on draggable items in the artwork to indicate they're draggable.
- * - Show "Edit Item" tools when an item is double-tapped.
  * - Make the "Edit Item" tools: resize, rotate, flip horizontal
  * - Maybe add a Done button that "saves" the compiled image and displays it next to the artwork (like for a picture postcard)
  * - Maybe actually save that photo and allow it to be emailed.
@@ -20,6 +18,16 @@ var activate_ui = function() {
 
   // Show the Retake button
   $('button.small').show();
+
+  // Define the toolbox, and make it draggable
+  $('#toolbox').draggable({
+    containment: '#gallery'
+  });
+
+  // Turn on the item edit tools
+  $('section img').dblclick(function() {
+    item_editor(this);
+  });
 
   // Make beauty options draggable
   $('section img').draggable({
@@ -39,47 +47,44 @@ var activate_ui = function() {
     }
   });
 
-  // Turn on the item edit tools
-  $('section img').dblclick(function() {
-    item_editor(this);
-  });
-
   // Enable navigation between personas
   persona_nav();
 
 }
 
 /**
- * Tools to edit an item.
- * Items can be resized, rotated, or flipped horizontally.
+ * Show tools for editing items.
  */
 var item_editor = function(activeItem) {
 
-  // Set some variables
-  var $activeItem = $(activeItem), // jQuery object
-      $toolbox = $('#toolbox'); // Edit tools
+  var $activeItem = $(activeItem),
+      $toolbox = $('#toolbox');
+
+  // Show border around activeItem
+  $activeItem.addClass('activeItem');
 
   // Show the toolbox
   $toolbox.fadeIn('fast');
 
-  // Allow it to be draggable
-  $toolbox.draggable({
-    containment: '#gallery'
+  // Close the toolbox when the X is clicked
+  $('span#close').click(function() {
+    $toolbox.fadeOut('fast');
+    $activeItem.removeClass('activeItem');
   });
 
-  // @DEBUG
-  console.log('Toolbox opened for ' + activeItem.id);
+}
 
-  // Flip button
-  $('div#flip').click(function() {
-    $activeItem.toggleClass('flipped');
-    // @DEBUG
-    console.log('Flipped ' + activeItem.id);
+/**
+ * Click handlers for toolbox buttons.
+ */
+$(function() {
+  $('div#flip').click(function () {
+    $('.activeItem').toggleClass('flipped');
   });
 
   // Resize buttons
   // @TODO - less redundancy; figure out max/min
-  $('div.resize #bigger').click(function() {
+  /*$('div.resize #bigger').click(function() {
     // Figure out the current size
     var currentHeight = this.height(),
         currentWidth = this.width();
@@ -103,17 +108,9 @@ var item_editor = function(activeItem) {
     });
     // @DEBUG
     console.log('Shrunk ' + activeItem.id);
-  });
+  });*/
 
-  // Close the toolbox when the X is clicked
-  $('span#close').click(function() {
-    $('#toolbox').fadeOut('fast');
-  });
-
-  // If a different item is clicked, update activeItem
-
-
-}
+});
 
 /**
  * Persona navigation.
