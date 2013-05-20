@@ -233,7 +233,12 @@ section#baller {
   left: 487px;
   top: 105px;
 }
-
+#baller img.obj_3 {
+  width: 180px;
+  height: 140px;
+  left: 760px;
+  top: 72px;
+}
 
 section#soldier {
   height: 395px;
