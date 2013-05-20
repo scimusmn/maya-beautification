@@ -111,9 +111,6 @@ button.small {
   margin-top: 24px;
 }
 .container {
-  padding: 10px;
-  background: black;
-  border-radius: 4px;
   margin-top: 20px;
 }
 #timer {
@@ -173,6 +170,7 @@ section#nobleman {
 section img {
   border: 3px solid yellow;
   border-radius: 10px;
+  position: absolute;
 }
 img.ui-draggable-dragging {
   border: 3px solid blue;
@@ -186,26 +184,26 @@ img.activeItem {
   padding: 0px;
 }
 #nobleman img#obj_1 {
-  left: 48px;
-  top: 93px;
+  left: 93px;
+  top: 474px;
   height: 314px;
   width: 234px;
 }
 #nobleman img#obj_2 {
-  left: -121px;
-  top: 72px;
+  left: 174px;
+  top: 650px;
   width: 122px;
   height: 120px;
 }
 #nobleman img#obj_3 {
-  left: 167px;
-  top: -73px;
+  left: 593px;
+  top: 471px;
   width: 182px;
   height: 157px;
 }
 #nobleman img#obj_4 {
-  left: 29px;
-  top: 87px;
+  left: 647px;
+  top: 655px;
   width: 66px;
   height: 128px;
 }
