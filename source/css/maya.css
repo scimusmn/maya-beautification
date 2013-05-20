@@ -162,6 +162,9 @@ li.active {
 }
 
 /* Artwork and items */
+section {
+  position: relative;
+}
 section#nobleman {
   width: 960px;
   height: 639px;
@@ -184,26 +187,26 @@ img.activeItem {
   padding: 0px;
 }
 #nobleman img#obj_1 {
-  left: 93px;
-  top: 474px;
+  left: 43px;
+  top: 90px;
   height: 314px;
   width: 234px;
 }
 #nobleman img#obj_2 {
-  left: 174px;
-  top: 650px;
+  left: 123px;
+  top: 264px;
   width: 122px;
   height: 120px;
 }
 #nobleman img#obj_3 {
-  left: 593px;
-  top: 471px;
+  left: 543px;
+  top: 85px;
   width: 182px;
   height: 157px;
 }
 #nobleman img#obj_4 {
-  left: 647px;
-  top: 655px;
+  left: 596px;
+  top: 271px;
   width: 66px;
   height: 128px;
 }
