@@ -16,8 +16,8 @@
  */
 var activate_ui = function() {
 
-  // Show the Retake button
-  $('button.small').show();
+  // Show the Retake and Hide Outlines buttons
+  $('button.small').not('#show').show();
 
   // Define the toolbox, and make it draggable
   $('#toolbox').draggable({
@@ -104,6 +104,26 @@ $(function() {
     $('.activeItem').animate({
       height: currentHeight - 50,
       width: currentWidth - 50
+    });
+  });
+
+  // Hide/show outlines
+  $('#hide').click(function() {
+    $('section img').css({
+      'border': 'none',
+      'padding': '3px'
+    });
+    $(this).fadeOut(200, function() {
+      $('#show').fadeIn(200);
+    });
+  });
+  $('#show').click(function() {
+    $('section img').not('.dropped').css({
+      'border': '3px solid yellow',
+      'padding': '0px'
+    });
+    $(this).fadeOut(200, function() {
+      $('#hide').fadeIn(200);
     });
   });
 
