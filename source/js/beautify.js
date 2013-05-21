@@ -5,7 +5,6 @@
  * to drag, drop, resize, and rotate items from a piece of Mayan artwork onto their own photo.
  *
  * @TODO:
- * - Show a hint box after you drag an item to your photo that tells you to double-click to edit items.
  * - Maybe add a Done button that "saves" the compiled image and displays it next to the artwork (like for a picture postcard)
  * - Maybe actually save that photo and allow it to be emailed.
  */
@@ -35,9 +34,19 @@ var activate_ui = function() {
   });
 
   // Drop zone on the photo
+  var editInfo = 0;
   $('#gallery').droppable({
     drop: function(event, ui) {
       ui.draggable.addClass('dropped');
+      editInfo++;
+      // Show the edit info tip on the first drop
+      if (editInfo === 1) {
+        $('div#edit_info').fadeIn(800); // show the info
+        // hide the info when the close button is tapped
+        $('#edit_info button').click(function() {
+          $('div#edit_info').fadeOut(400);
+        });
+      }
     }
   });
   // Drop zone on the artwork
@@ -89,7 +98,7 @@ $(function() {
     // Figure out the current size
     var currentHeight = $('.activeItem').height(),
         currentWidth = $('.activeItem').width();
-    // Animate it to 20px bigger
+    // Animate it to 50px bigger
     $('.activeItem').animate({
       height: currentHeight + 50,
       width: currentWidth + 50
@@ -100,7 +109,7 @@ $(function() {
     // Figure out the current size
     var currentHeight = $('.activeItem').height(),
         currentWidth = $('.activeItem').width();
-    // Animate it to 20px smaller
+    // Animate it to 50px smaller
     $('.activeItem').animate({
       height: currentHeight - 50,
       width: currentWidth - 50
@@ -109,7 +118,7 @@ $(function() {
 
   // Hide/show outlines
   $('#hide').click(function() {
-    $('section img').css({
+    $('section img').not('.dropped').css({
       'border': 'none',
       'padding': '3px'
     });

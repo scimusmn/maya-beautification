@@ -271,6 +271,20 @@ section#noblewoman {
 }
 
 /* Edit tools */
+div#edit_info {
+  display: none;
+  color: #FFFFFF;
+  background: #000000;
+  opacity: .8;
+  border: 6px solid #FFF;
+  border-radius: 8px;
+  float: left;
+  padding: 16px;
+  position: absolute;
+  top: 1240px;
+  font-size: 24px;
+  left: 360px;
+}
 #toolbox {
   display: none;
   width: 150px;
