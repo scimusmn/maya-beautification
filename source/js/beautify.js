@@ -5,6 +5,7 @@
  * to drag, drop, resize, and rotate items from a piece of Mayan artwork onto their own photo.
  *
  * @TODO:
+ * - Show a hint box after you drag an item to your photo that tells you to double-click to edit items.
  * - Maybe add a Done button that "saves" the compiled image and displays it next to the artwork (like for a picture postcard)
  * - Maybe actually save that photo and allow it to be emailed.
  */
