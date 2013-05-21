@@ -130,6 +130,9 @@ button.small {
 }
 #personas p {
   margin: 0 0 22px 0;
+  font-size: 20px;
+  line-height: 25px;
+  color: #444;
 }
 #draggable-wrapper {
   float: left;
@@ -238,6 +241,18 @@ section#baller {
   height: 140px;
   left: 760px;
   top: 72px;
+}
+#baller img.obj_4 {
+  width: 148px;
+  height: 152px;
+  left: 345px;
+  top: 260px;
+}
+#baller img.obj_5 {
+  width: 48px;
+  height: 102px;
+  left: 530px;
+  top: 310px;
 }
 
 section#soldier {
