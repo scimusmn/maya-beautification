@@ -279,15 +279,20 @@ div#edit_info {
   display: none;
   color: #FFFFFF;
   background: #000000;
-  opacity: .8;
-  border: 6px solid #FFF;
+  opacity: .9;
+  border: 3px solid #FFF;
   border-radius: 8px;
   float: left;
   padding: 16px;
   position: absolute;
   top: 1240px;
   font-size: 24px;
-  left: 360px;
+  left: 328px;
+}
+#edit_info button {
+  float: right;
+  margin: -5px 6px 10px;
+  padding: 8px 16px;
 }
 #toolbox {
   display: none;
