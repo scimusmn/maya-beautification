@@ -168,6 +168,12 @@ section {
   position: relative;
   width: 960px;
 }
+section.persona {
+  display: none;
+}
+section.persona.active {
+  display: block;
+}
 section img {
   border: 3px solid yellow;
   border-radius: 10px;

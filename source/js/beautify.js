@@ -146,10 +146,6 @@ var persona_nav = function() {
 
   var selected_persona = $('#characters li.active').attr('id');
 
-  // Hide sections after the initial page load
-  // Hiding them before, like with CSS, breaks drag/drop/resize since the item size can't be determined
-  $('#draggable-wrapper section').not('.active').hide();
-
   // Update visible elements when an option is clicked
   $('ul#characters li').click(function() {
 
