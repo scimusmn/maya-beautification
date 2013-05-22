@@ -144,22 +144,19 @@ $(function() {
  */
 var persona_nav = function() {
 
-  var selected_persona = $('#characters li.active').attr('id');
-
   // Update visible elements when an option is clicked
   $('ul#characters li').click(function() {
 
-    // Hide currently visible persona text and items
-    $('#draggable-wrapper section').hide();
-    $('.active').not('li').hide();
     $('.active').removeClass('active');
+    $(this).addClass('active');
 
-    // Activate the new selection
-    selected_persona = $(this).attr('id');
-    var selected_persona_name = $(this).text();
+    // Hide currently visible persona text and items, then show the new ones
+    $('#draggable-wrapper section:visible').add('p.persona:visible').fadeOut(200, function() {
+      $('p.' + $('ul#characters li.active').attr('id')).fadeIn(700);
+      $('section#' + $('ul#characters li.active').attr('id')).fadeIn(700);
+    });
 
-    $('p.' + selected_persona).add('#' + selected_persona).addClass('active');
-    $('#draggable-wrapper section#' + selected_persona).add($('p.' + selected_persona)).fadeIn(700);
+    console.log('Persona changed to ' + $('ul#characters li.active').attr('id'));
 
   });
 

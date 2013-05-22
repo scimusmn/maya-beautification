@@ -153,10 +153,12 @@ ul#characters li.active {
   background: blue;
   color: #f7f7f7;
 }
-p.persona {
+p.persona,
+section.persona {
   display: none;
 }
-p.active {
+p.persona:first-of-type,
+section.persona:first-of-type {
   display: block;
 }
 li.active {
@@ -167,12 +169,6 @@ li.active {
 section {
   position: relative;
   width: 960px;
-}
-section.persona {
-  display: none;
-}
-section.persona.active {
-  display: block;
 }
 section img {
   border: 3px solid yellow;
