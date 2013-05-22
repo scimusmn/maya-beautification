@@ -194,24 +194,28 @@ section#nobleman {
   top: 90px;
   height: 314px;
   width: 234px;
+  z-index: 2;
 }
 #nobleman img.obj_2 {
   left: 123px;
   top: 264px;
   width: 122px;
   height: 120px;
+  z-index: 3;
 }
 #nobleman img.obj_3 {
   left: 543px;
   top: 85px;
   width: 385px;
   height: 388px;
+  z-index: 1;
 }
 #nobleman img.obj_4 {
   left: 596px;
   top: 271px;
   width: 66px;
   height: 128px;
+  z-index: 4;
 }
 
 section#scribe {
