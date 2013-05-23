@@ -299,9 +299,9 @@ div#edit_info {
   float: left;
   padding: 16px;
   position: absolute;
-  top: 1240px;
   font-size: 24px;
-  left: 328px;
+  left: 70px;
+  bottom: -20px;
 }
 #edit_info button {
   float: right;
