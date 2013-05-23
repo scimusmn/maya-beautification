@@ -221,20 +221,38 @@ section#nobleman {
 }
 
 section#scribe {
-  height: 391px;
+  height: 401px;
   background: url(../../assets/bg_scribes.jpg) no-repeat;
 }
 #scribe img.obj_1 {
   width: 123px;
   height: 130px;
-  left: 211px;
-  top: 40px;
+  left: 205px;
+  top: 41px;
 }
 #scribe img.obj_2 {
   width: 306px;
   height: 163px;
-  left: 554px;
+  left: 551px;
   top: 40px;
+}
+#scribe img.obj_3 {
+  width: 37px;
+  height: 39px;
+  left: 250px;
+  top: 163px;
+}
+#scribe img.obj_4 {
+  width: 35px;
+  height: 34px;
+  left: 213px;
+  top: 199px;
+}
+#scribe img.obj_5 {
+  width: 36px;
+  height: 36px;
+  left: 269px;
+  top: 232px;
 }
 
 section#baller {
