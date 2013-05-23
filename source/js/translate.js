@@ -25,7 +25,8 @@ dictionary = {
     "retake_photo": "Retake photo",
     "hide_outlines": "Hide outlines",
     "show_outlines": "Show outlines",
-    "edit_info": "Double-tap an item to resize or flip it."
+    "edit_info": "Double-tap an item to resize or flip it.",
+    "done": "Done"
   },
   "spanish": {
     "title": "Los antiguos mayas tenían estándares de belleza que participan tanto temporales adornos y joyas y la modificación corporal permanente.",
@@ -46,7 +47,8 @@ dictionary = {
     "retake_photo": "Retomar foto",
     "hide_outlines": "Ocultar los contornos",
     "show_outlines": "Mostrar esboza",
-    "edit_info": "Pulse dos veces en un elemento para cambiar el tamaño o darle la vuelta."
+    "edit_info": "Pulse dos veces en un elemento para cambiar el tamaño o darle la vuelta.",
+    "done": "Hecho"
   }
 };
 

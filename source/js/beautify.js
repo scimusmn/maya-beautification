@@ -2,11 +2,7 @@
  * UI-related functionality custom for the Maya beautification component.
  * Once camera.js has a photo of the visitor, functions from this file are called.
  * These functions initialize and configure jQuery UI interactions which allow the visitor
- * to drag, drop, resize, and rotate items from a piece of Mayan artwork onto their own photo.
- *
- * @TODO:
- * - Maybe add a Done button that "saves" the compiled image and displays it next to the artwork (like for a picture postcard)
- * - Maybe actually save that photo and allow it to be emailed.
+ * to drag, drop, resize, and flip items from a piece of Mayan artwork onto their own photo.
  */
 
 /**
@@ -136,6 +132,11 @@ $(function() {
     });
   });
 
+  // Done button - clear the screen and show just the photo
+  $('#done').click(function() {
+    showPhoto();
+  });
+
 });
 
 /**
@@ -159,5 +160,16 @@ var persona_nav = function() {
     console.log('Persona changed to ' + $('ul#characters li.active').attr('id'));
 
   });
+
+}
+
+/**
+ * When the user hits "Done," clear the screen and just show their photo.
+ */
+var showPhoto = function() {
+  var selected_persona = $('ul#characters li.active').attr('id');
+
+  // Hide everything except the user photo and their chosen objects
+  // Then show some text or something
 
 }
