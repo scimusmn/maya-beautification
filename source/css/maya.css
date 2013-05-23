@@ -206,8 +206,8 @@ section#nobleman {
   z-index: 3;
 }
 #nobleman img.obj_3 {
-  left: 543px;
-  top: 85px;
+  left: 541px;
+  top: 84px;
   width: 385px;
   height: 388px;
   z-index: 1;
@@ -223,6 +223,18 @@ section#nobleman {
 section#scribe {
   height: 391px;
   background: url(../../assets/bg_scribes.jpg) no-repeat;
+}
+#scribe img.obj_1 {
+  width: 123px;
+  height: 130px;
+  left: 211px;
+  top: 40px;
+}
+#scribe img.obj_2 {
+  width: 306px;
+  height: 163px;
+  left: 554px;
+  top: 40px;
 }
 
 section#baller {
