@@ -90,25 +90,11 @@ $(function() {
   });
 
   // Resize buttons
-  $('#bigger').click(function() {
-    // Figure out the current size
-    var currentHeight = $('.activeItem').height(),
-        currentWidth = $('.activeItem').width();
-    // Animate it to 50px bigger
+  $('#bigger, #smaller').click(function() {
+    var newSizes = resizeImage($('.activeItem'), this.id);
     $('.activeItem').animate({
-      height: currentHeight + 50,
-      width: currentWidth + 50
-    });
-  });
-
-  $('#smaller').click(function() {
-    // Figure out the current size
-    var currentHeight = $('.activeItem').height(),
-        currentWidth = $('.activeItem').width();
-    // Animate it to 50px smaller
-    $('.activeItem').animate({
-      height: currentHeight - 50,
-      width: currentWidth - 50
+      height: newSizes.height,
+      width: newSizes.width
     });
   });
 
@@ -171,5 +157,40 @@ var showPhoto = function() {
 
   // Hide everything except the user photo and their chosen objects
   // Then show some text or something
+
+}
+
+/**
+ * Resize an image while maintaining its aspect ratio.
+ * @param $img - jQuery object representing an image
+ * @param direction - string - either "bigger" or "smaller"
+ * @return newSizes - object with new height and width
+ */
+var resizeImage = function($img, direction) {
+
+  // Figure out the original size of the image
+  var origSizes = {
+    height: $img.height(),
+    width: $img.width()
+  };
+
+  // Figure out the new sizes. With math!
+  var newWidth;
+  if (direction === 'bigger') {
+    newWidth = origSizes.width + 50;
+  } else if (direction === 'smaller') {
+    newWidth = origSizes.width - 50;
+  }
+
+  newHeight = (newWidth * origSizes.height) / origSizes.width;
+
+  // Put the newSizes into an object
+  var newSizes = {
+    height: newHeight,
+    width: newWidth
+  }
+
+  // console.log('New height ' + newSizes.height + ' / New width: ' + newSizes.width);
+  return newSizes;
 
 }
