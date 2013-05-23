@@ -182,7 +182,7 @@ var resizeImage = function($img, direction) {
     newWidth = origSizes.width - 50;
   }
 
-  newHeight = (newWidth * origSizes.height) / origSizes.width;
+  var newHeight = (newWidth * origSizes.height) / origSizes.width;
 
   // Put the newSizes into an object
   var newSizes = {
@@ -190,7 +190,6 @@ var resizeImage = function($img, direction) {
     width: newWidth
   }
 
-  // console.log('New height ' + newSizes.height + ' / New width: ' + newSizes.width);
   return newSizes;
 
 }
