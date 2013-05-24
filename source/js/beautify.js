@@ -26,7 +26,14 @@ var activate_ui = function() {
 
   // Make beauty options draggable
   $('section img').draggable({
-    containment: '#draggable-wrapper'
+    containment: '#draggable-wrapper',
+    // Obj #6 for the scribe, the inkwell, needs to switch the img source when the drag starts.
+    // The second image is the inkwell without the scribe's hand.
+    start: function(event, ui) {
+      if (ui.helper[0].id === 'inkwell') {
+        $('#inkwell').attr('src', '../assets/obj_scribe_6.png');
+      }
+    }
   });
 
   // Drop zone on the photo
