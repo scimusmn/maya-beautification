@@ -27,11 +27,15 @@ var activate_ui = function() {
   // Make beauty options draggable
   $('section img').draggable({
     containment: '#draggable-wrapper',
-    // Obj #6 for the scribe, the inkwell, needs to switch the img source when the drag starts.
-    // The second image is the inkwell without the scribe's hand.
+    // Swap out image source on drag for items that have overlapping objects
     start: function(event, ui) {
       if (ui.helper[0].id === 'inkwell') {
+        // Remove the scribe's hand from the inkwell
         $('#inkwell').attr('src', '../assets/obj_scribe_6.png');
+      }
+      if (ui.helper[0].id === 'backpack') {
+        // Remove the severed head from the backpack
+        $('#backpack').attr('src', '../assets/obj_noblewoman_4_noHead.png');
       }
     }
   });
