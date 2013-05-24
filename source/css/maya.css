@@ -315,7 +315,19 @@ section#noblewoman {
   width: 167px;
   height: 146px;
   left: 1px;
-top: 116px;
+  top: 116px;
+}
+#noblewoman img.obj_3 {
+  width: 253px;
+  height: 179px;
+  left: 178px;
+  top: 0px;
+}
+#noblewoman img.obj_4 {
+  width: 137px;
+  height: 333px;
+  left: 176px;
+  top: 77px;
 }
 
 /* Edit tools */
