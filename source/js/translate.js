@@ -7,11 +7,13 @@ var dictionary, set_lang;
 // Object literal behaving as multi-dictionary
 dictionary = {
   "english": {
-    "title": "The ancient Maya had standards of beauty that involved both temporary adornments and jewelry and permanent body modification.",
+    "title": "Adornments and jewelry and body modification",
     "intro_text": "Beauty, for the ancient Maya, was more than skin deep. From elegant jewelry and clothing to modified skulls and teeth inlaid with precious stones, Maya beautification could signify social status or establish a connection with the divine. And sometimes, of course, it was just for looking good.",
     "step1_instructions": "Look towards the webcam and tap the Take photo button when you're ready. You will have 5 seconds to get into position after hitting the button.",
     "take_photo": "Take photo",
-    "choose_persona": "Choose a persona, then drag highlighted items from the artwork below onto your photo.",
+    "choose_persona": "Choose a persona.",
+    "drag": "Drag highlighted items from the artwork onto your photo.",
+    "edit": "Double-tap an item to resize or flip it.",
     "nobleman": "Noble man",
     "noblewoman": "Noble woman",
     "scribe": "Scribe",
@@ -25,15 +27,17 @@ dictionary = {
     "retake_photo": "Retake photo",
     "hide_outlines": "Hide outlines",
     "show_outlines": "Show outlines",
-    "edit_info": "Double-tap an item to resize or flip it.",
+    "edit_info": "",
     "done": "Done"
   },
   "spanish": {
-    "title": "Los antiguos mayas tenían estándares de belleza que participan tanto temporales adornos y joyas y la modificación corporal permanente.",
+    "title": "Adornos y joyas y la modificación corporal",
     "intro_text": "Belleza, para los antiguos mayas, fue más allá de la piel. Desde elegantes joyas y ropa de los cráneos y dientes con incrustaciones de piedras preciosas modificados, embellecimiento Maya podría significar la condición social o establecer una conexión con lo divino. Y a veces, por supuesto, era sólo para estar guapa.",
     "step1_instructions": "Mira hacia la cámara y pulse el botón Tomar foto cuando estés listo. Usted tendrá 5 segundos para entrar en posición después de presionar el botón.",
     "take_photo": "Tome la foto",
-    "choose_persona": "Elige un personaje:",
+    "choose_persona": "Elige un personaje.",
+    "drag": "Arrastre los elementos destacados de las ilustraciones en su foto.",
+    "edit": "Pulse dos veces en un elemento para cambiar el tamaño o darle la vuelta.",
     "nobleman": "Noble",
     "noblewoman": "Aristócrata",
     "scribe": "Escriba",
@@ -47,7 +51,6 @@ dictionary = {
     "retake_photo": "Retomar foto",
     "hide_outlines": "Ocultar los contornos",
     "show_outlines": "Mostrar esboza",
-    "edit_info": "Pulse dos veces en un elemento para cambiar el tamaño o darle la vuelta.",
     "done": "Hecho"
   }
 };

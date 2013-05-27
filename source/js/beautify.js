@@ -45,15 +45,6 @@ var activate_ui = function() {
   $('#gallery').droppable({
     drop: function(event, ui) {
       ui.draggable.addClass('dropped');
-      editInfo++;
-      // Show the edit info tip on the first drop
-      if (editInfo === 1) {
-        $('div#edit_info').fadeIn(800); // show the info
-        // hide the info when the close button is tapped
-        $('#edit_info button').click(function() {
-          $('div#edit_info').fadeOut(400);
-        });
-      }
     }
   });
   // Drop zone on the artwork

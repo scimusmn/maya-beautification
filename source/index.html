@@ -10,7 +10,7 @@
 
 <body onload="onLoad();">
   <h1 data-translate="title"></h1>
-  <div id="lang"><span id="eng">English</span><span id="spanish">Spanish</span></div>
+  <div id="lang"><span id="eng" class="selected">English</span><span id="spanish">Spanish</span></div>
 
   <div id="step-1">
     <p data-translate="intro_text"></p>
@@ -27,7 +27,11 @@
 
   <div id="step-2" hidden>
     <div id="personas">
-      <h2 data-translate="choose_persona"></h2>
+      <ul id="directions">
+        <li data-translate="choose_persona"></li>
+        <li data-translate="drag"></li>
+        <li data-translate="edit"></li>
+      </ul>
       <ul id="characters">
         <li data-translate="nobleman" id="nobleman" class="active"></li>
         <li data-translate="scribe" id="scribe" ></li>
@@ -95,10 +99,6 @@
     <button data-translate="done" class="small" id="done"></button>
   </p>
 
-  <div id="edit_info">
-    <p data-translate="edit_info"></p>
-    <button class="small">OK</button>
-  </div>
   <div id="toolbox">
     <span id="close">x</span>
     <div class="resize" id="bigger">Bigger</div>
