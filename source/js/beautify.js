@@ -14,11 +14,6 @@ var activate_ui = function() {
   // Show the Retake and Hide Outlines buttons
   $('button.small').not('#show').show();
 
-  // Define the toolbox, and make it draggable
-  $('#toolbox').draggable({
-    containment: '#gallery'
-  });
-
   // Turn on the item edit tools
   $('section img').dblclick(function() {
     item_editor(this);
