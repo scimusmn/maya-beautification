@@ -8,10 +8,11 @@ var dictionary, set_lang;
 dictionary = {
   "english": {
     "title": "Beauty was more than skin deep",
-    "intro_text": "Beauty, for the ancient Maya, was more than skin deep. From elegant jewelry and clothing to modified skulls and teeth inlaid with precious stones, Maya beautification could signify social status or establish a connection with the divine. And sometimes, of course, it was just for looking good.",
+    "who": "Who do you want to be?",
+    "intro_text": "From elegant jewelry and clothing to permanently altered skull shapes and teeth inlaid with precious stones, ancient Maya standards of beauty held important meanings. They could signify social status, establish a connection with the divine, or, of course, just make sure a person was looking good.",
     "step1_instructions": "Look towards the webcam and tap the Take photo button when you're ready. You will have 5 seconds to get into position after hitting the button.",
     "take_photo": "Take photo",
-    "choose_persona": "Choose a persona.",
+    "choose_persona": "Choose a character.",
     "drag": "Drag highlighted items from the artwork onto your photo.",
     "edit": "Double-tap an item to resize or flip it.",
     "nobleman": "Noble man",
@@ -27,12 +28,12 @@ dictionary = {
     "retake_photo": "Retake photo",
     "hide_outlines": "Hide outlines",
     "show_outlines": "Show outlines",
-    "edit_info": "",
     "done": "Done"
   },
   "spanish": {
     "title": "Belleza fue más allá de la piel",
-    "intro_text": "Belleza, para los antiguos mayas, fue más allá de la piel. Desde elegantes joyas y ropa de los cráneos y dientes con incrustaciones de piedras preciosas modificados, embellecimiento Maya podría significar la condición social o establecer una conexión con lo divino. Y a veces, por supuesto, era sólo para estar guapa.",
+    "who": "¿A quién quieres ser?",
+    "intro_text": "Desde elegantes joyas y prendas de vestir a las formas y los dientes del cráneo alterados permanentemente con incrustaciones de piedras preciosas, las normas de los antiguos mayas de la belleza celebraron significados importantes. Podrían significar status social, establecer una conexión con lo divino, o, por supuesto, sólo asegúrese de que una persona se ve bien.",
     "step1_instructions": "Mira hacia la cámara y pulse el botón Tomar foto cuando estés listo. Usted tendrá 5 segundos para entrar en posición después de presionar el botón.",
     "take_photo": "Tome la foto",
     "choose_persona": "Elige un personaje.",
