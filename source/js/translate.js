@@ -7,7 +7,7 @@ var dictionary, set_lang;
 // Object literal behaving as multi-dictionary
 dictionary = {
   "english": {
-    "title": "Adornments and jewelry and body modification",
+    "title": "Beauty was more than skin deep",
     "intro_text": "Beauty, for the ancient Maya, was more than skin deep. From elegant jewelry and clothing to modified skulls and teeth inlaid with precious stones, Maya beautification could signify social status or establish a connection with the divine. And sometimes, of course, it was just for looking good.",
     "step1_instructions": "Look towards the webcam and tap the Take photo button when you're ready. You will have 5 seconds to get into position after hitting the button.",
     "take_photo": "Take photo",
@@ -31,7 +31,7 @@ dictionary = {
     "done": "Done"
   },
   "spanish": {
-    "title": "Adornos y joyas y la modificación corporal",
+    "title": "Belleza fue más allá de la piel",
     "intro_text": "Belleza, para los antiguos mayas, fue más allá de la piel. Desde elegantes joyas y ropa de los cráneos y dientes con incrustaciones de piedras preciosas modificados, embellecimiento Maya podría significar la condición social o establecer una conexión con lo divino. Y a veces, por supuesto, era sólo para estar guapa.",
     "step1_instructions": "Mira hacia la cámara y pulse el botón Tomar foto cuando estés listo. Usted tendrá 5 segundos para entrar en posición después de presionar el botón.",
     "take_photo": "Tome la foto",
