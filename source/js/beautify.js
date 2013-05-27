@@ -120,11 +120,6 @@ $(function() {
     });
   });
 
-  // Done button - clear the screen and show just the photo
-  $('#done').click(function() {
-    showPhoto();
-  });
-
 });
 
 /**
@@ -148,17 +143,6 @@ var persona_nav = function() {
     console.log('Persona changed to ' + $('ul#characters li.active').attr('id'));
 
   });
-
-}
-
-/**
- * When the user hits "Done," clear the screen and just show their photo.
- */
-var showPhoto = function() {
-  var selected_persona = $('ul#characters li.active').attr('id');
-
-  // Hide everything except the user photo and their chosen objects
-  // Then show some text or something
 
 }
 

@@ -27,8 +27,7 @@ dictionary = {
     "soldier_text": "A Maya soldier’s practical battle kit might include spears, axes, clubs, shields, and quilted cotton armor stuffed with rock salt, but they also decorated themselves for war. Murals show soldiers in full body paint, with black, red or striped bodies, and fierce expressions painted around their eyes and noses. Some officers may also have worn elaborate headdresses, to connect them to warrior lineages or military orders.",
     "retake_photo": "Retake photo",
     "hide_outlines": "Hide outlines",
-    "show_outlines": "Show outlines",
-    "done": "Done"
+    "show_outlines": "Show outlines"
   },
   "spanish": {
     "title": "Belleza fue más allá de la piel",
@@ -51,8 +50,7 @@ dictionary = {
     "soldier_text": "Kit batalla práctica de un soldado Maya podría incluir lanzas, hachas, palos, escudos y armaduras de algodón acolchado relleno de sal de roca, pero también decorada para la guerra. Murales muestran soldados en la pintura de cuerpo completo, con cuerpo negro, rojo o rayas, y expresiones feroces pintados alrededor de los ojos y la nariz. Algunos agentes también pueden haber llevado elaborados tocados, para conectarlos a los linajes guerrero u órdenes militares.",
     "retake_photo": "Retomar foto",
     "hide_outlines": "Ocultar los contornos",
-    "show_outlines": "Mostrar esboza",
-    "done": "Hecho"
+    "show_outlines": "Mostrar esboza"
   }
 };
 
