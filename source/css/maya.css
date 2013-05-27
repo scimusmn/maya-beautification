@@ -297,8 +297,44 @@ section#baller {
 }
 
 section#soldier {
-  height: 395px;
+  height: 601px;
   background: url(../../assets/bg_soldiers.jpg) no-repeat;
+}
+#soldier img.obj_1 {
+  width: 30px;
+  height: 42px;
+  left: 101px;
+  top: 247px;
+}
+#soldier img.obj_2 {
+  width: 182px;
+  height: 232px;
+  left: 0px;
+  top: 68px;
+}
+#soldier img.obj_3 {
+  width: 178px;
+  height: 212px;
+  left: 145px;
+  top: 77px;
+}
+#soldier img.obj_4 {
+  width: 54px;
+  height: 58px;
+  left: 676px;
+  top: 216px;
+}
+#soldier img.obj_5 {
+  width: 53px;
+  height: 80px;
+  left: 657px;
+  top: 166px;
+}
+#soldier img.obj_6 {
+  width: 209px;
+  height: 118px;
+  left: 740px;
+  top: 69px;
 }
 
 section#noblewoman {
