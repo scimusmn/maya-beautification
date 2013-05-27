@@ -131,6 +131,8 @@ function capture() {
 
   // Hide step 1, show step 2
   document.getElementById('step-1').hidden = true;
+  document.getElementById('title').hidden = true;
+  document.getElementById('who').hidden = false;
   $('#step-2').fadeIn(500);
 
   // Turn on the jQuery UI interactions
