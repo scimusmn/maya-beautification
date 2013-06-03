@@ -118,7 +118,8 @@ $(function() {
 /**
  * Persona navigation.
  * When a persona option is tapped, load that section's text and beauty options.
- */
+ * @TODO - If you have the outlines hidden, show them again if you change to a different persona
+*/
 var persona_nav = function() {
 
   // Update visible elements when an option is clicked
