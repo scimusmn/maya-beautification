@@ -14,11 +14,6 @@ var activate_ui = function() {
   // Show the Retake and Hide Outlines buttons
   $('button.small').not('#show').show();
 
-  // Turn on the item edit tools
-  $('section img').dblclick(function() {
-    item_editor(this);
-  });
-
   // Make beauty options draggable
   $('section img').draggable({
     containment: '#draggable-wrapper',
@@ -40,6 +35,7 @@ var activate_ui = function() {
   $('#gallery').droppable({
     drop: function(event, ui) {
       ui.draggable.addClass('dropped');
+      item_editor(ui.draggable);
     }
   });
   // Drop zone on the artwork
@@ -57,9 +53,9 @@ var activate_ui = function() {
 /**
  * Show tools for editing items.
  */
-var item_editor = function(activeItem) {
+var item_editor = function($activeItem) {
 
-  var $activeItem = $(activeItem),
+  var //$activeItem = $(activeItem),
       $toolbox = $('#toolbox');
 
   // Show border around activeItem
