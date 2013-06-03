@@ -154,6 +154,7 @@ var resizeImage = function($img, direction) {
   };
 
   // Figure out the new sizes. With math!
+  // @TODO - This should be percentage based, not pixel based. Items vary a lot in size.
   var newWidth;
   if (direction === 'bigger') {
     newWidth = origSizes.width + 50;
