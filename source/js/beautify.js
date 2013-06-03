@@ -35,7 +35,9 @@ var activate_ui = function() {
   $('#gallery').droppable({
     drop: function(event, ui) {
       ui.draggable.addClass('dropped');
-      item_editor(ui.draggable);
+      // This item becomes the activeItem
+      $('.activeItem').removeClass('activeItem');
+      item_editor(ui.draggable); // Show the tools
     }
   });
   // Drop zone on the artwork
@@ -52,11 +54,11 @@ var activate_ui = function() {
 
 /**
  * Show tools for editing items.
+ * @param $activeItem -  the item we're editing, as jQuery object
  */
 var item_editor = function($activeItem) {
 
-  var //$activeItem = $(activeItem),
-      $toolbox = $('#toolbox');
+  var $toolbox = $('#toolbox');
 
   // Show border around activeItem
   $activeItem.addClass('activeItem');
