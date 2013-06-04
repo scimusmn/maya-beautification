@@ -84,33 +84,29 @@ h5 {
 }
 
 /* Buttons */
-button {
-  background: -webkit-gradient(linear, 0% 40%, 0% 70%, from(#F9F9F9), to(#E3E3E3));
-  background: -webkit-linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
-  background: linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
-  border: 1px solid #999;
-  -webkit-border-radius: 3px;
+div.button {
+  background: linear-gradient(#005a84 40%, #006087 70%);
   border-radius: 3px;
   padding: 15px 58px;
+  color: #FFFFFF;
   outline: none;
   white-space: nowrap;
   -webkit-user-select: none;
   user-select: none;
   cursor: pointer;
-  text-shadow: 1px 1px #fff;
+  text-shadow: 1px 1px #000;
   font-weight: 700;
   font-size: 24px;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px #000;
+  font-family: "Univers 75 Black";
 }
 button:not(:disabled):hover,
 button:not(:disabled).active {
-  border-color: black;
 }
 button:not(:disabled):active,
 button:not(:disabled).active {
-  background: -webkit-gradient(linear, 0% 40%, 0% 70%, from(#E3E3E3), to(#F9F9F9));
-  background: -webkit-linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
-  background: linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
+
 }
 button.small {
   font-size: 14px;
@@ -123,8 +119,7 @@ button.small {
 /* Language switcher */
 #lang {
   color: rgba(255,255,255,.5);
-  height: 34px;
-  padding-top: 16px;
+  height: 47px;
   font-family: "Univers 75 Black";
   background: url(../../assets/theme/bg_header.png) repeat-x;
   text-transform: uppercase;
@@ -134,13 +129,19 @@ button.small {
   margin-bottom: 190px;
 }
 #lang span {
-  padding: 6px;
+  position: relative;
+  top: -3px;
 }
 #lang span.selected {
+  color: rgba(255, 255, 255, 1);
 }
-#lang span#eng {
-  margin-right: 4px;
-  padding-right: 8px;
+#lang img {
+  position: relative;
+  top: 8px;
+  margin: 0 10px;
+}
+span#spanish {
+  margin-right: 20px;
 }
 
 ul#directions {
@@ -164,6 +165,13 @@ ul#directions li {
   float: left;
   font-size: 19px;
 }
+#app-wrap {
+  background: #262626;
+  float: left;
+  padding: 50px 30px 700px;
+  margin: 0 20px;
+  box-shadow: 0 0 30px #000;
+}
 #take-photo {
   float: left;
   margin-top: 20px;
@@ -174,15 +182,12 @@ ul#directions li {
 }
 .container {
   width: 960px;
-}
-.container, #gallery {
-  float: left;
+  border: 10px solid #FFFFFF;
+  height: 720px;
+  box-shadow: 0 0 30px #000;
 }
 #gallery {
   margin-top: 24px;
-}
-.container {
-  margin-top: 20px;
 }
 #timer {
   position: relative;
@@ -241,7 +246,7 @@ li.active {
 }
 
 /* Artwork and items */
-section {
+#step-2 section {
   position: relative;
   width: 960px;
 }

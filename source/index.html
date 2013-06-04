@@ -11,6 +11,7 @@
 <body onload="onLoad();">
   <div id="lang">
     <span id="eng" class="selected">English</span>
+    <img src="../assets/theme/separator.png">
     <span id="spanish">Spanish</span>
   </div>
 
@@ -26,14 +27,16 @@
         <span data-translate="step1_instructions_pt2"></span>
       </p>
     </div>
-    <section id="app">
-      <div class="container">
-        <video id="monitor" style="display:none;" autoplay></video>
-      </div>
+    <div id="app-wrap">
+      <section id="app">
+        <div class="container">
+          <video id="monitor" style="display:none;" autoplay></video>
+        </div>
       </section>
       <div id="timer"></div>
-    <canvas id="photo" style="display:none"></canvas>
-    <p id="take-photo" class="button"><button data-translate="take_photo" onclick="countdown(this, 6)"></button></p>
+      <canvas id="photo" style="display:none"></canvas>
+      <div id="take-photo" class="button" data-translate="take_photo" onclick="countdown(this, 6)"></div>
+    </div>
   </div>
 
   <div id="step-2" hidden>
