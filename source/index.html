@@ -9,13 +9,23 @@
 </head>
 
 <body onload="onLoad();">
+  <div id="lang">
+    <span id="eng" class="selected">English</span>
+    <span id="spanish">Spanish</span>
+  </div>
+
   <h1 id="title" data-translate="title"></h1>
   <h1 id="who" data-translate="who" hidden></h1>
-  <div id="lang"><span id="eng" class="selected">English</span><span id="spanish">Spanish</span></div>
 
   <div id="step-1">
-    <p data-translate="intro_text"></p>
-    <p><strong data-translate="step1_instructions"></strong></p>
+    <p id="intro" data-translate="intro_text"></p>
+    <div class="circle">
+      <p>
+        <span data-translate="step1_instructions"></span>
+        <span class="action" data-translate="take_photo"></span>
+        <span data-translate="step1_instructions_pt2"></span>
+      </p>
+    </div>
     <section id="app">
       <div class="container">
         <video id="monitor" style="display:none;" autoplay></video>
@@ -23,7 +33,7 @@
       </section>
       <div id="timer"></div>
     <canvas id="photo" style="display:none"></canvas>
-    <p id="take-photo" class="button"><button data-translate="take_photo" onclick="countdown(this, 1)"></button></p>
+    <p id="take-photo" class="button"><button data-translate="take_photo" onclick="countdown(this, 6)"></button></p>
   </div>
 
   <div id="step-2" hidden>
