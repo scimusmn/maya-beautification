@@ -120,7 +120,7 @@ div.button {
   box-shadow: 0 0 10px #000;
   font-family: "Univers 75 Black";
 }
-button.small {
+div.button.small {
   font-size: 14px;
   padding: 10px 20px;
   margin: 10px 10px 0 0;
