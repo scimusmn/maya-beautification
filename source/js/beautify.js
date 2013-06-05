@@ -118,7 +118,6 @@ $(function() {
 /**
  * Persona navigation.
  * When a persona option is tapped, load that section's text and beauty options.
- * @TODO - If you have the outlines hidden, show them again if you change to a different persona
 */
 var persona_nav = function() {
 
@@ -132,6 +131,12 @@ var persona_nav = function() {
     $('#draggable-wrapper section:visible').add('p.persona:visible').fadeOut(200, function() {
       $('p.' + $('ul#characters li.active').attr('id')).fadeIn(700);
       $('section#' + $('ul#characters li.active').attr('id')).fadeIn(700);
+    });
+
+    // Show outlines
+    $('section img:visible').not('.dropped').css({
+      'border': '3px solid yellow',
+      'padding': '0px'
     });
 
     console.log('Persona changed to ' + $('ul#characters li.active').attr('id'));
