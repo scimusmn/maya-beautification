@@ -203,15 +203,15 @@ p.intro {
   float: left;
   width: 960px;
   background: #262626;
-  padding: 10px 40px;
-  margin: -90px 20px 0;
+  margin: -90px 60px 0;
   box-shadow: 1px 1px 20px #000;
 }
 #gallery img {
   height: 720px;
 }
 p.persona {
-  margin: 0 0 28px 0;
+  margin: 0;
+  padding: 40px;
   font-size: 17px;
 }
 #draggable-wrapper {
@@ -220,20 +220,30 @@ p.persona {
 }
 ul#characters {
   list-style-type: none;
-  margin: 10px 0 30px 0;
+  margin: 0;
   font-size: 18px;
   padding: 0;
-  border-radius: 6px;
+  border-radius: 6px 6px 0 0;
+  width: 960px;
+  height: 56px;
 }
 ul#characters li {
-  display: inline-block;
-  cursor: pointer;
-  padding: 8px 12px;
-  border-radius: 5px;
+  background: linear-gradient(#333333 0%, #000000 50%);
+  padding: 18px 39px 20px;
+  text-transform: uppercase;
+  font-family: "Univers 75 Black";
+  color: rgb(128,161,182);
+  float: left;
+}
+ul#characters li#soldier {
+  padding-right: 46px;
 }
 ul#characters li.active {
-  background: blue;
-  color: #f7f7f7;
+  color: #FFFFFF;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  top: -20px;
+  padding-bottom: 40px;
 }
 p.persona,
 section.persona {
