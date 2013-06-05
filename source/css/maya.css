@@ -32,7 +32,7 @@ body {
   color: #FFFFFF;
   width: 1080px;
   height: 1920px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -446,6 +446,12 @@ section#noblewoman {
   height: 333px;
   left: 176px;
   top: 77px;
+}
+#noblewoman img.obj_5 {
+  width: 15px;
+  height: 30px;
+  left: 368px;
+  top: 90px;
 }
 
 /* Edit tools */
