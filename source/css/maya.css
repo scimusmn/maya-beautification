@@ -23,6 +23,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  line-height: 1.3;
 }
 body {
   background: url(../../assets/theme/bg.jpg) repeat;
@@ -51,6 +52,15 @@ h1 {
   margin: 0 0 25px 100px;
   width: auto;
   float: left;
+  line-height: normal;
+}
+h1#title {
+  margin-top: 190px;
+}
+h1#who {
+  margin: 38px 0 15px 100px;
+  font-size: 68px;
+  background-position: 0 53px;
 }
 h2 {
   font-weight: 300;
@@ -69,6 +79,7 @@ h5 {
   position: relative;
   top: -30px;
   float: right;
+  margin-right: 120px;
 }
 .circle p {
   width: 150px;
@@ -81,6 +92,14 @@ h5 {
   font-family: "Univers 75 Black";
   text-transform: uppercase;
   white-space: nowrap;
+}
+#step-2 .circle {
+  top: -100px;
+  margin-right: 180px;
+}
+#step-2 .circle p {
+  top: 72px;
+  font-size: 18px;
 }
 
 /* Buttons */
@@ -101,13 +120,6 @@ div.button {
   box-shadow: 0 0 10px #000;
   font-family: "Univers 75 Black";
 }
-button:not(:disabled):hover,
-button:not(:disabled).active {
-}
-button:not(:disabled):active,
-button:not(:disabled).active {
-
-}
 button.small {
   font-size: 14px;
   padding: 10px 20px;
@@ -126,7 +138,6 @@ button.small {
   font-size: 12px;
   text-align: right;
   width: 100%;
-  margin-bottom: 190px;
 }
 #lang span {
   position: relative;
@@ -144,21 +155,8 @@ span#spanish {
   margin-right: 20px;
 }
 
-ul#directions {
-  margin: 0 0 26px;
-  padding: 0 0 0 30px;
-  font-size: 20px;
-}
-ul#directions li {
-  padding: 0px 0 6px;
-}
-
 /* Step 1 */
-#step-1 {
-  width: 960px;
-  line-height: 1.3;
-}
-#step-1 p#intro {
+p.intro {
   clear: both;
   margin: 0 0 0 100px;
   width: 540px;
@@ -191,24 +189,30 @@ ul#directions li {
 }
 #timer {
   position: relative;
-  font-size: 500px;
-  top: -700px;
+  font-size: 400px;
+  top: -680px;
   left: 340px;
   color: #FFF;
+  font-family: "Univers 75 Black";
+  text-shadow: 1px 1px 20px #000;
 }
 
 /* Step 2 */
+#tab-wrap {
+  clear: both;
+  float: left;
+  width: 960px;
+  background: #262626;
+  padding: 10px 40px;
+  margin: -90px 20px 0;
+  box-shadow: 1px 1px 20px #000;
+}
 #gallery img {
   height: 720px;
 }
-#personas {
-  float: left;
-}
-#personas p {
+p.persona {
   margin: 0 0 28px 0;
-  font-size: 20px;
-  line-height: 25px;
-  color: #444;
+  font-size: 17px;
 }
 #draggable-wrapper {
   float: left;
@@ -219,9 +223,7 @@ ul#characters {
   margin: 10px 0 30px 0;
   font-size: 18px;
   padding: 0;
-  background: #DDDDDD;
   border-radius: 6px;
-  width: 568px;
 }
 ul#characters li {
   display: inline-block;
@@ -268,7 +270,7 @@ img.activeItem {
 }
 
 section#nobleman {
-  height: 639px;
+  height: 495px;
   background: url(../../assets/bg_nobleman.jpg) no-repeat;
 }
 #nobleman img.obj_1 {
@@ -342,7 +344,7 @@ section#scribe {
 }
 
 section#baller {
-  height: 573px;
+  height: 490px;
   background: url(../../assets/bg_ballers.jpg) no-repeat;
 }
 #baller img.obj_1 {
@@ -377,7 +379,7 @@ section#baller {
 }
 
 section#soldier {
-  height: 601px;
+  height: 526px;
   background: url(../../assets/bg_soldiers.jpg) no-repeat;
 }
 #soldier img.obj_1 {
