@@ -12,7 +12,7 @@
 var activate_ui = function() {
 
   // Show the Retake and Hide Outlines buttons
-  $('button.small').not('#show').show();
+  $('.button.small').not('#show').show();
 
   // Make beauty options draggable
   $('section img').draggable({
@@ -133,11 +133,8 @@ var persona_nav = function() {
       $('section#' + $('ul#characters li.active').attr('id')).fadeIn(700);
     });
 
-    // Show outlines
-    $('section img:visible').not('.dropped').css({
-      'border': '3px solid yellow',
-      'padding': '0px'
-    });
+    // Hide the toolbox if it's open
+    $('#toolbox').hide();
 
     console.log('Persona changed to ' + $('ul#characters li.active').attr('id'));
 
