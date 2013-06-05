@@ -326,36 +326,42 @@ section#scribe {
   height: 130px;
   left: 205px;
   top: 41px;
+  z-index: 3;
 }
 #scribe img.obj_2 {
   width: 306px;
   height: 163px;
   left: 551px;
   top: 40px;
+  z-index: 1;
 }
 #scribe img.obj_3 {
   width: 37px;
   height: 39px;
   left: 250px;
   top: 163px;
+  z-index: 4;
 }
 #scribe img.obj_4 {
   width: 35px;
   height: 34px;
   left: 213px;
   top: 199px;
+  z-index: 4;
 }
 #scribe img.obj_5 {
   width: 36px;
   height: 36px;
   left: 269px;
   top: 232px;
+  z-index: 4;
 }
 #scribe img.obj_6 {
   width: 176px;
   height: 304px;
   left: 45px;
   top: 42px;
+  z-index: 2;
 }
 
 section#baller {
@@ -367,36 +373,42 @@ section#baller {
   width: 197px;
   left: 20px;
   top: 7px;
+  z-index: 3;
 }
 #baller img.obj_2 {
   width: 213px;
   height: 202px;
   left: 488px;
   top: 36px;
+  z-index: 1;
 }
 #baller img.obj_3 {
   width: 180px;
   height: 140px;
   left: 762px;
   top: 3px;
+  z-index: 2;
 }
 #baller img.obj_4 {
   width: 148px;
   height: 152px;
   left: 342px;
   top: 187px;
+  z-index: 4;
 }
 #baller img.obj_5 {
   width: 48px;
   height: 102px;
   left: 529px;
   top: 243px;
+  z-index: 5;
 }
 #baller img.obj_6 {
   width: 17px;
   height: 20px;
   left: 114px;
   top: 112px;
+  z-index: 6;
 }
 
 section#soldier {
@@ -406,38 +418,44 @@ section#soldier {
 #soldier img.obj_1 {
   width: 30px;
   height: 42px;
-left: 100px;
-top: 188px;
+  left: 100px;
+  top: 188px;
+  z-index: 1;
 }
 #soldier img.obj_2 {
   width: 182px;
   height: 232px;
   left: 0px;
   top: 10px;
+  z-index: 6;
 }
 #soldier img.obj_3 {
   width: 178px;
   height: 212px;
   left: 145px;
   top: 18px;
+  z-index: 2;
 }
 #soldier img.obj_4 {
   width: 54px;
   height: 58px;
   left: 676px;
   top: 155px;
+  z-index: 4;
 }
 #soldier img.obj_5 {
   width: 53px;
   height: 80px;
   left: 657px;
   top: 108px;
+  z-index: 5;
 }
 #soldier img.obj_6 {
   width: 209px;
   height: 118px;
   left: 739px;
   top: 11px;
+  z-index: 3;
 }
 
 section#noblewoman {
@@ -449,30 +467,35 @@ section#noblewoman {
   height: 88px;
   left: 41px;
   top: 26px;
+  z-index: 4;
 }
 #noblewoman img.obj_2 {
   width: 167px;
   height: 146px;
   left: 1px;
   top: 116px;
+  z-index: 3;
 }
 #noblewoman img.obj_3 {
   width: 253px;
   height: 179px;
   left: 178px;
   top: 0px;
+  z-index: 2;
 }
 #noblewoman img.obj_4 {
   width: 137px;
   height: 333px;
   left: 176px;
   top: 77px;
+  z-index: 1;
 }
 #noblewoman img.obj_5 {
   width: 15px;
   height: 30px;
   left: 368px;
   top: 90px;
+  z-index: 5;
 }
 
 /* Edit tools */
