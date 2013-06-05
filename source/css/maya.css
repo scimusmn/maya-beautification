@@ -32,7 +32,7 @@ body {
   color: #FFFFFF;
   width: 1080px;
   height: 1920px;
-  /*overflow: hidden;*/
+  overflow: hidden;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -103,6 +103,10 @@ h5 {
 }
 
 /* Buttons */
+#buttons {
+  margin: 12px 0 0 20px;
+  float: left;
+}
 div.button {
   background: linear-gradient(#005a84 40%, #006087 70%);
   border-radius: 3px;
@@ -123,7 +127,7 @@ div.button {
 div.button.small {
   font-size: 14px;
   padding: 10px 20px;
-  margin: 10px 10px 0 0;
+  margin: 0 20px 0 0;
   float: left;
   display: none;
 }
@@ -203,8 +207,9 @@ p.intro {
   float: left;
   width: 960px;
   background: #262626;
-  margin: -90px 60px 0;
+  margin: -80px 60px 0;
   box-shadow: 1px 1px 20px #000;
+  padding-bottom: 300px;
 }
 #gallery img {
   height: 720px;
@@ -484,7 +489,7 @@ section#noblewoman {
   font-size: 24px;
   float: left;
   position: relative;
-  left: 60px;
+  left: 0;
   bottom: 450px;
   border: 3px solid #555;
   font-family: "Univers 75 Black";
