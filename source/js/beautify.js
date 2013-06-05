@@ -95,21 +95,15 @@ $(function() {
 
   // Hide/show outlines
   $('#hide').click(function() {
-    $('section img').not('.dropped').css({
-      'border': 'none',
-      'padding': '3px'
-    });
-    $(this).fadeOut(200, function() {
-      $('#show').fadeIn(200);
+    $('section img').not('.dropped').add('.activeItem').addClass('noBorder');
+    $(this).fadeOut(100, function() {
+      $('#show').show();
     });
   });
   $('#show').click(function() {
-    $('section img').not('.dropped').css({
-      'border': '3px solid yellow',
-      'padding': '0px'
-    });
+    $('section img').not('.dropped').add('.activeItem').removeClass('noBorder');
     $(this).fadeOut(200, function() {
-      $('#hide').fadeIn(200);
+      $('#hide').show();
     });
   });
 

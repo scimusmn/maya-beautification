@@ -283,6 +283,10 @@ img.activeItem {
   border: 3px dotted #FFF;
   padding: 0px;
 }
+img.noBorder{
+  border: none;
+  padding: 3px;
+}
 
 section#nobleman {
   height: 495px;
