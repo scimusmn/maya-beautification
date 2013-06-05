@@ -94,7 +94,7 @@ h5 {
   white-space: nowrap;
 }
 #step-2 .circle {
-  top: -100px;
+  top: -110px;
   margin-right: 180px;
 }
 #step-2 .circle p {
@@ -350,32 +350,32 @@ section#baller {
 #baller img.obj_1 {
   height: 114px;
   width: 197px;
-  left: 19px;
-  top: 76px;
+  left: 20px;
+  top: 7px;
 }
 #baller img.obj_2 {
   width: 213px;
   height: 202px;
-  left: 487px;
-  top: 105px;
+  left: 488px;
+  top: 36px;
 }
 #baller img.obj_3 {
   width: 180px;
   height: 140px;
-  left: 760px;
-  top: 72px;
+  left: 762px;
+  top: 3px;
 }
 #baller img.obj_4 {
   width: 148px;
   height: 152px;
-  left: 345px;
-  top: 255px;
+  left: 342px;
+  top: 187px;
 }
 #baller img.obj_5 {
   width: 48px;
   height: 102px;
-  left: 530px;
-  top: 310px;
+  left: 529px;
+  top: 243px;
 }
 
 section#soldier {
@@ -385,38 +385,38 @@ section#soldier {
 #soldier img.obj_1 {
   width: 30px;
   height: 42px;
-  left: 101px;
-  top: 247px;
+left: 100px;
+top: 188px;
 }
 #soldier img.obj_2 {
   width: 182px;
   height: 232px;
   left: 0px;
-  top: 68px;
+  top: 10px;
 }
 #soldier img.obj_3 {
   width: 178px;
   height: 212px;
   left: 145px;
-  top: 77px;
+  top: 18px;
 }
 #soldier img.obj_4 {
   width: 54px;
   height: 58px;
   left: 676px;
-  top: 216px;
+  top: 155px;
 }
 #soldier img.obj_5 {
   width: 53px;
   height: 80px;
   left: 657px;
-  top: 166px;
+  top: 108px;
 }
 #soldier img.obj_6 {
   width: 209px;
   height: 118px;
-  left: 740px;
-  top: 69px;
+  left: 739px;
+  top: 11px;
 }
 
 section#noblewoman {
