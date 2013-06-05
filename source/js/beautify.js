@@ -162,9 +162,9 @@ var resizeImage = function($img, direction) {
   // Figure out the new sizes. With math!
   var newWidth;
   if (direction === 'bigger') {
-    newWidth = origSizes.width + (origSizes.width * .5);
+    newWidth = origSizes.width + (origSizes.width * .25);
   } else if (direction === 'smaller') {
-    newWidth = origSizes.width - (origSizes.width * .5);
+    newWidth = origSizes.width - (origSizes.width * .25);
   }
 
   var newHeight = (newWidth * origSizes.height) / origSizes.width;
