@@ -8,7 +8,7 @@ module.exports = function(grunt) {
           files: {
             'build/js/maya_beautification.min.js': [
               'libs/jquery-1.9.1.min.js',
-              'libs/jquery.hammer.min.js',
+              'libs/jquery-ui-1.10.2.custom.min.js',
               'libs/jquery.ui.touch-punch.min.js',
               'source/js/translate.js',
               'source/js/camera.js',
