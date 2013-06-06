@@ -33,14 +33,9 @@ window.requestAnimationFrame = (function(){
 // This function will be called if a webcam is available and the user has
 // granted access for the web application to use it.
 function successCallback(stream) {
-  // Firefox has a special property that you can use to associate the stream with the
-  // video object.  Other browsers require you to use createObjectURL.
-  if (video.mozSrcObject !== undefined) {
-    video.mozSrcObject = stream;
-  }
-  else {
-    video.src = (window.URL && window.URL.createObjectURL(stream)) || stream;
-  }
+
+  video.src = (window.URL && window.URL.createObjectURL(stream)) || stream;
+
   video.play();
 
   // Show the DOM elements that contain the rest of the UI
