@@ -33,7 +33,7 @@ dictionary = {
     "smaller": "Smaller",
     "flip": "Flip"
   },
-  "spanish": {
+  "español": {
     "title": "Belleza fue más allá de la piel",
     "who": "¿A quién quieres ser?",
     "how": "¿Cómo te ves en las antiguas modas Maya?",
@@ -84,6 +84,13 @@ $(function () {
       set_lang(dictionary[language]);
     }
     $(this).addClass('selected'); // Toggle button class
+
+    // Toggle body class
+    if (language == 'english') {
+      $('body').removeClass('spanish');
+    } else {
+      $('body').addClass('spanish');
+    }
 
   });
 
