@@ -34,8 +34,11 @@ window.requestAnimationFrame = (function(){
 // granted access for the web application to use it.
 function successCallback(stream) {
 
-  video.src = (window.URL && window.URL.createObjectURL(stream)) || stream;
+  // Remove the preloader
+  $('#preloader').remove();
 
+  // Set the video source and play it
+  video.src = (window.URL && window.URL.createObjectURL(stream)) || stream;
   video.play();
 
   // Show the DOM elements that contain the rest of the UI

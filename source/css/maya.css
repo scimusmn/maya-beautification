@@ -19,6 +19,14 @@
   url(../../assets/fonts/SerifaStd-Roman.otf);
 }
 
+#preloader {
+  border: none;
+  position: relative;
+  top: 420px;
+  left: 420px;
+  margin-top: -420px;
+}
+
 html, body {
   height: 100%;
   margin: 0;
