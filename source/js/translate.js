@@ -7,8 +7,6 @@ var dictionary, set_lang;
 // Object literal behaving as multi-dictionary
 dictionary = {
   "english": {
-    "title": "Beauty was more than skin deep",
-    "who": "Who do you want to be?",
     "how": "How would you look in ancient Maya fashions?",
     "intro_text": "From elegant jewelry and clothing to permanently altered skull shapes and teeth inlaid with precious stones, ancient Maya marks of beauty held important meanings. They could signify social status, establish a connection with the divine, or simply help a person look good.",
     "step1_instructions": "Tap the ",
@@ -34,8 +32,6 @@ dictionary = {
     "flip": "Flip"
   },
   "español": {
-    "title": "Belleza fue más allá de la piel",
-    "who": "¿A quién quieres ser?",
     "how": "¿Cómo te ves en las antiguas modas Maya?",
     "intro_text": "Desde elegantes joyas y prendas de vestir a las formas y los dientes del cráneo alterados permanentemente con incrustaciones de piedras preciosas, las normas de los antiguos mayas de la belleza celebraron significados importantes. Podrían significar status social, establecer una conexión con lo divino, o, por supuesto, sólo asegúrese de que una persona se ve bien.",
     "step1_instructions": "Pulse el ",

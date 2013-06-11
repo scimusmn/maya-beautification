@@ -1,9 +1,4 @@
 @font-face {
-  font-family: "Univers39-UltraCondensedThin";
-  src: local("Univers39-UltraCondensedThin"),
-  url(../../assets/fonts/Univers39UltraCondensedThin.ttf);
-}
-@font-face {
   font-family: "Univers UltraCondensed";
   src: local("Univers 59 Ultra Condensed.ttf"),
   url(../../assets/fonts/Univers 59 Ultra Condensed.ttf);
@@ -40,7 +35,7 @@ body {
   color: #FFFFFF;
   width: 1080px;
   height: 1920px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -48,15 +43,12 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
+.text-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
 h1 {
-  font-family: "Univers39-UltraCondensedThin";
-  text-shadow: 1px 1px 2px rgba(0,0,0,1);
-  background: url(../../assets/theme/underline.png) repeat-x 0px 83px;
-  font-weight: lighter;
-  font-size: 98px;
-  letter-spacing: .02em;
-  text-transform: uppercase;
-  color: rgb(128, 161, 182);
   margin: 0 0 25px 100px;
   width: auto;
   float: left;
@@ -64,11 +56,15 @@ h1 {
 }
 h1#title {
   margin-top: 190px;
+  background: url(../../assets/text/headline-1-eng.png) no-repeat;
+  width: 664px;
+  height: 119px;
 }
 h1#who {
   margin: 38px 0 15px 100px;
-  font-size: 68px;
-  background-position: 0 53px;
+  background: url(../../assets/text/headline-2-eng.png) no-repeat;
+  width: 343px;
+  height: 67px;
 }
 h2 {
   font-weight: 300;
