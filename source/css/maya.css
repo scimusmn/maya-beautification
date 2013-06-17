@@ -53,22 +53,22 @@ h1#title {
   width: 664px;
   height: 119px;
 }
-/*body.spanish h1#title {
+body.spanish h1#title {
   background: url(../../assets/text/headline-1-esp.png) no-repeat;
-  width: ;
-  height: ;
-}*/
+  width: 711px;
+  height: 128px;
+}
 h1#who {
   margin: 38px 0 15px 100px;
   background: url(../../assets/text/headline-2-eng.png) no-repeat;
   width: 343px;
   height: 67px;
 }
-/*body.spanish h1#who {
+body.spanish h1#who {
   background: url(../../assets/text/headline-2-esp.png) no-repeat;
-  width: ;
-  height: ;
-}*/
+  width: 225px;
+  height: 67px;
+}
 h2 {
   font-weight: 300;
   margin-top: 0;
