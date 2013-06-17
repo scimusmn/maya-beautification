@@ -1,0 +1,17 @@
+/**
+ * Kiosk-specific styles.
+ * These are touch-screen or device specific styles that aren't useful when working on files locally.
+ * This file is included in the build script but not included in the /source version.
+ */
+
+* { cursor: url(../../assets/theme/cursor.png), none !important }
+
+body {
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
