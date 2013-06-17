@@ -42,6 +42,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-smushit');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify', 'cssmin', 'smushit']);
+  grunt.registerTask('default', ['uglify', 'cssmin']);
 
 };
