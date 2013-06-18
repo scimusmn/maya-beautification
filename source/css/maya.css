@@ -192,6 +192,7 @@ p.intro {
   float: left;
   margin-top: 20px;
   clear: both;
+  width: 171px;
 }
 #monitor {
   height: 720px;
