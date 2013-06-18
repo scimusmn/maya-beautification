@@ -160,6 +160,7 @@ div.button.small {
 #lang span {
   position: relative;
   top: -3px;
+  padding: 20px;
 }
 #lang span.selected {
   color: rgba(255, 255, 255, 1);
@@ -167,10 +168,6 @@ div.button.small {
 #lang img {
   position: relative;
   top: 8px;
-  margin: 0 10px;
-}
-span#spanish {
-  margin-right: 20px;
 }
 
 /* Step 1 */
