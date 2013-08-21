@@ -94,16 +94,17 @@ $(function() {
   });
 
   // Hide/show outlines
-  $('#hide').click(function() {
+  $('#outlineToggle #hide_label').click(function() {
     $('section img').not('.dropped').add('.activeItem').addClass('noBorder');
-    $(this).fadeOut(100, function() {
-      $('#show').show();
+    $(this).fadeOut('fast', function() {
+      $('#show_label').show();
     });
   });
-  $('#show').click(function() {
+
+  $('#outlineToggle #show_label').click(function() {
     $('section img').not('.dropped').add('.activeItem').removeClass('noBorder');
-    $(this).fadeOut(200, function() {
-      $('#hide').show();
+    $(this).fadeOut('fast', function() {
+      $('#hide_label').show();
     });
   });
 

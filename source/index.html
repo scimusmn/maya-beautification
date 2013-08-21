@@ -104,7 +104,7 @@
 
         <div id="toolbox">
           <span id="close">x</span>
-          <div class="resize" id="bigger" data-translate="bigger"></div>
+          <div class="resize" id="bigger" data-translate="bigger"><span></span></div>
           <div class="resize" id="smaller" data-translate="smaller"></div>
           <div id="flip" data-translate="flip"></div>
         </div>
@@ -113,8 +113,10 @@
 
     <div id="buttons">
       <div data-translate="retake_photo" class="button small" onclick="window.location.reload(false)"></div>
-      <div data-translate="hide_outlines" class="button small" id="hide"></div>
-      <div data-translate="show_outlines" class="button small" id="show"></div>
+      <div class="button small" id="outlineToggle">
+        <span id="hide_label" data-translate="hide_outlines"></span>
+        <span id="show_label" data-translate="show_outlines"></span>
+      </div>
     </div>
 
   </div><!--/tab-wrap-->

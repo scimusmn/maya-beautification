@@ -148,6 +148,9 @@ div.button.small {
   position: relative;
   z-index: 999;
 }
+#show_label {
+  display: none;
+}
 
 /* Language switcher */
 #lang {
