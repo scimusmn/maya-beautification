@@ -524,14 +524,12 @@ section#noblewoman {
 /* Edit tools */
 #toolbox {
   display: none;
-  width: 150px;
-  height: 160px;
+  padding: 0 24px 0;
   color: #FFFFFF;
   font-weight: bold;
   opacity: .90;
   background: #000000;
   border-radius: 8px;
-  text-align: center;
   font-size: 24px;
   float: left;
   position: relative;
@@ -542,23 +540,25 @@ section#noblewoman {
   font-family: "Univers 75 Black";
   z-index: 999;
 }
-#toolbox div:first-child {
-  padding-top: 12px;
-}
 #toolbox div {
-  padding: 0 0 4px 0;
+  padding: 0 0 8px 0;
+  position: relative;
+  top: -20px;
+  clear: both;
 }
 #toolbox div:hover {
   color: orange;
 }
 span#close {
   background: #888;
-  padding: 4px 8px;
-  border-radius: 10px;
+  padding: 4px 12px;
+  border-radius: 20px;
   border: 1px solid white;
   position: relative;
-  left: 70px;
-  top: -10px;
+  right: -40px;
+  top: -20px;
+  float: right;
+  font-size: 30px;
 }
 
 /* Effects */
