@@ -119,7 +119,7 @@ body.spanish #step-2 .circle p {
 
 /* Buttons */
 #buttons {
-  margin: 12px 0 0 20px;
+  margin: 20px 0 0 24px;
   float: left;
 }
 div.button {
@@ -140,8 +140,8 @@ div.button {
   font-family: "Univers 75 Black";
 }
 div.button.small {
-  font-size: 14px;
-  padding: 10px 20px;
+  font-size: 20px;
+  padding: 18px 30px;
   margin: 0 20px 0 0;
   float: left;
   display: none;
