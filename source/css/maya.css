@@ -35,6 +35,7 @@ body {
   color: #FFFFFF;
   width: 1080px;
   height: 1920px;
+  border: 1px dotted #FFFFFF;
 }
 .text-replacement {
   text-indent: 100%;
