@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     cssmin: {
       compress: {
         files: {
-          'build/css/maya_beautification.min.css': ['source/css/maya.css', 'source/css/build.css', 'libs/jquery-ui-1.10.2.custom.min.css']
+          'build/css/maya_beautification.min.css': ['libs/jquery-ui-1.10.2.custom.min.css', 'source/css/maya.css', 'source/css/build.css']
         }
       }
     },
