@@ -16,8 +16,3 @@ body {
   user-select: none;
   border: none;
 }
-
-/* Make all the img non-reactive to any mouse events such as dragging, hovering, clicking etc */
-img {
-  pointer-events: none;
-}
