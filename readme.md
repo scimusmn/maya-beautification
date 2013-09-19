@@ -4,9 +4,6 @@
 The ancient Maya had standards of beauty that involved both temporary adornments and jewelry and permanent body modification.
 See yourself wearing all these adornments.
 
-## Long Term
-+ The next version will implement a C++ library that can do live manipulation of video.
-
 ## Dev setup 
 If you're making code changes, you can use Grunt to create new builds.
 
